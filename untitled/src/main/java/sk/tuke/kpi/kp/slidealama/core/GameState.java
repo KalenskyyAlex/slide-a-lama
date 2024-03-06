@@ -1,5 +1,5 @@
 package sk.tuke.kpi.kp.slidealama.core;
 
 public enum GameState {
-    END, RUNNING;
+    END, WRONG_INPUT, IDLE, INPUT_ENTERED, INPUT_APPROVED;
 }

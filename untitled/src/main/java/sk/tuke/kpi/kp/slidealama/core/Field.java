@@ -10,7 +10,7 @@ public class Field {
 
     private TileFront front = new TileFront(3);
 
-    private Cursor cursor = new Cursor(0, Cursor.Side.LEFT);
+    private Cursor cursor = new Cursor(1, Cursor.Side.LEFT);
 
     public void generate() {
         do {
@@ -20,6 +20,33 @@ public class Field {
                 }
             }
         } while (checkForMatch() != null);
+    }
+    
+    public void insert(){
+        int pos = getCursor().getPosition() - 1;
+        switch (getCursor().getSide()) {
+            case UP -> {
+                for(int i = tiles.length - 1; i > 0;  i--){
+                    tiles[i][pos] = tiles[i - 1][pos];
+                }
+
+                tiles[0][pos] = front.pull();
+            }
+            case LEFT -> {
+                for(int j = tiles.length - 1; j > 0; j--){
+                    tiles[tiles.length - pos - 1][j] = tiles[tiles.length - pos - 1][j - 1];
+                }
+                
+                tiles[tiles.length - pos - 1][0] = front.pull();
+            }
+            case RIGHT -> {
+                for(int j = 0; j < tiles.length - 1; j++){
+                    tiles[pos][j] = tiles[pos][j + 1];
+                }
+
+                tiles[pos][tiles.length - 1] = front.pull();
+            }
+        }
     }
 
     public Tile[][] getTiles()
