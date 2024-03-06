@@ -1,6 +1,7 @@
 package sk.tuke.kpi.kp.slidealama.ui;
 
 import sk.tuke.kpi.kp.slidealama.core.Field;
+import sk.tuke.kpi.kp.slidealama.core.GameState;
 
 public interface UI {
 
@@ -8,4 +9,5 @@ public interface UI {
 
     void render();
 
+    GameState handleInput();
 }
