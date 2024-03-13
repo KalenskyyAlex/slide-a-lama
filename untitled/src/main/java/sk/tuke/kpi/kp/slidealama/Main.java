@@ -1,16 +1,10 @@
 package sk.tuke.kpi.kp.slidealama;
 
-import sk.tuke.kpi.kp.slidealama.core.Field;
 import sk.tuke.kpi.kp.slidealama.core.Game;
 import sk.tuke.kpi.kp.slidealama.core.GameState;
 import sk.tuke.kpi.kp.slidealama.core.MatchResult;
 import sk.tuke.kpi.kp.slidealama.ui.ConsoleUI;
 import sk.tuke.kpi.kp.slidealama.ui.UI;
-import sk.tuke.kpi.kp.slidealama.utils.ConsoleColors;
-
-import java.io.IOException;
-import java.util.Scanner;
-
 
 public class Main {
 
@@ -32,6 +26,7 @@ public class Main {
                 game.setState(GameState.IDLE);
                 game.getField().insert();
                 MatchResult m = game.getField().checkForMatch();
+                game.getField().update(m);
                 if(m != null) game.getCurrentPlayer().setScore(game.getCurrentPlayer().getScore() + m.getScoreMultiplier() * m.getLengthMultiplier());
                 if(game.getCurrentPlayer().getId() == 1) game.setCurrentPlayer(game.getPlayer2());
                 else game.setCurrentPlayer(game.getPlayer1());

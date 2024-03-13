@@ -38,6 +38,7 @@ public enum Match {
                         }
                     }
 
+                    if(field[i][j] == Tile.EMPTY) continue;
                     if(equals) return new MatchResult(j, i, orientation, length, field[i][j].getScoreMultiplier(), lengthMulriplier);
                 }
             }
@@ -53,6 +54,7 @@ public enum Match {
                         }
                     }
 
+                    if(field[i][j] == Tile.EMPTY) continue;
                     if(equals) return new MatchResult(j, i, orientation, length, field[i][j].getScoreMultiplier(), lengthMulriplier);
                 }
             }

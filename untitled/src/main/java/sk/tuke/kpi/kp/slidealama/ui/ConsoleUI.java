@@ -152,13 +152,13 @@ public class ConsoleUI implements UI {
         List<Tile> frontList = game.getField().getFront().toList();
         int length = game.getField().getFront().getFixedLength();
 
-        printHorizontalPattern("╓────╖", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 1);
+        printHorizontalPattern("╓════╖", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 1);
         printHorizontalPattern(ConsoleItemUtil.getRepresentation(frontList.get(0)), 1, 2 * offset_x + game.getFieldSize() * 4, offset_y + 2,"next → ║", "║");
         printHorizontalPattern("╟────╢", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3);
         for (int i = 1; i < length; i++) {
             printHorizontalPattern(ConsoleItemUtil.getRepresentation(frontList.get(i)), 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3 + i,"║", "║");
         }
-        printHorizontalPattern("╙────╜", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3 + length);
+        printHorizontalPattern("╙════╜", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3 + length);
     }
 
     private void renderScoreBar(){

@@ -32,6 +32,7 @@ public class ConsoleItemUtil {
             case GREEN -> ConsoleIcons.GREEN.getRepresentation();
             case YELLOW -> ConsoleIcons.YELLOW.getRepresentation();
             case PURPLE -> ConsoleIcons.PURPLE.getRepresentation();
+            case EMPTY -> "    ";
         };
     }
 }

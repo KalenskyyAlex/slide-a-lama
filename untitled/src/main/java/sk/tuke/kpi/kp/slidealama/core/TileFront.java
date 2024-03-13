@@ -1,9 +1,7 @@
 package sk.tuke.kpi.kp.slidealama.core;
 
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
+import java.util.concurrent.SynchronousQueue;
 
 public class TileFront {
 
@@ -15,18 +13,18 @@ public class TileFront {
 
     public TileFront(int length){
         this.fixedLength = length;
-        queue = new PriorityQueue<>();
+        queue = new LinkedList<>();
         generator = new Random();
 
         for(int i = 0; i < this.fixedLength; i++){
-            queue.add(tiles[generator.nextInt(tiles.length)]);
+            queue.add(tiles[generator.nextInt(1, tiles.length)]);
         }
     }
 
     public Tile pull(){
-        Tile front = queue.peek();
+        Tile front = queue.poll();
 
-        queue.add(tiles[generator.nextInt(tiles.length)]);
+        queue.add(tiles[generator.nextInt(1, tiles.length)]);
 
         return front;
     }
