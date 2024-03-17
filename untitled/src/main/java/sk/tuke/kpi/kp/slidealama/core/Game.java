@@ -6,8 +6,8 @@ public class Game {
 
     private Field field = new Field();
     
-    private Player player1 = new Player(1);
-    private Player player2 = new Player(2);
+    private Player player1 = new Player(1, "John");
+    private Player player2 = new Player(2, "Doe");
     private Player currentPlayer = player1;
 
     public Field getField(){

@@ -1,13 +1,21 @@
 package sk.tuke.kpi.kp.slidealama.ui;
 
+import sk.tuke.kpi.kp.slidealama.Main;
 import sk.tuke.kpi.kp.slidealama.core.Cursor;
 import sk.tuke.kpi.kp.slidealama.core.Game;
 import sk.tuke.kpi.kp.slidealama.core.GameState;
 import sk.tuke.kpi.kp.slidealama.core.Tile;
+import sk.tuke.kpi.kp.slidealama.dao.model.Comment;
+import sk.tuke.kpi.kp.slidealama.dao.model.Score;
+import sk.tuke.kpi.kp.slidealama.dao.service.CommentService;
+import sk.tuke.kpi.kp.slidealama.dao.service.RatingService;
+import sk.tuke.kpi.kp.slidealama.dao.service.ScoreService;
+import sk.tuke.kpi.kp.slidealama.dao.service.impl.CommentSericeJDBC;
+import sk.tuke.kpi.kp.slidealama.dao.service.impl.RatingServiceJDBC;
+import sk.tuke.kpi.kp.slidealama.dao.service.impl.ScoreServiceJDBC;
 import sk.tuke.kpi.kp.slidealama.utils.ConsoleColors;
 import sk.tuke.kpi.kp.slidealama.utils.ConsoleItemUtil;
 
-import java.io.FilterOutputStream;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +25,17 @@ public class ConsoleUI implements UI {
 
     private int offset_x = 10;
     private int offset_y = 4;
+
+    private String getStars(int rating){
+        return switch (rating){
+            case 1 -> ConsoleColors.RED_BOLD_BRIGHT + "★" + ConsoleColors.RESET;
+            case 2 -> ConsoleColors.RED_BOLD + "★★" + ConsoleColors.RESET;
+            case 3 -> ConsoleColors.YELLOW_BOLD + "★★★" + ConsoleColors.RESET;
+            case 4 -> ConsoleColors.GREEN_BOLD + "★★★★" + ConsoleColors.RESET;
+            case 5 -> ConsoleColors.GREEN_BOLD_BRIGHT + "★★★★★" + ConsoleColors.RESET;
+            default -> ConsoleColors.BLACK_BRIGHT + "NOT RATED" + ConsoleColors.RESET;
+        };
+    }
 
     public void setOffset_x(int offset_x) {
         this.offset_x = offset_x;
@@ -35,18 +54,51 @@ public class ConsoleUI implements UI {
         System.out.print(ConsoleColors.CLEAR_CONSOLE);
         System.out.flush();
 
-        renderField();
-        renderFront();
-        renderScoreBar();
-        renderBox();
-        renderHeader();
-        renderCursor();
-        renderCurrentPlayer();
-        renderRules();
+        if(game.getState() == GameState.START_P1){
+            renderStart("Player 1");
+        }
+        else if (game.getState() == GameState.START_P2) {
+            renderStart("Player 2");
+        }
+        else if (game.getState() == GameState.END){
+            renderEnd();
+        }
+        else if(game.getState() == GameState.PAUSED_SCORE){
+            renderTopScores();
+        }
+        else if(game.getState() == GameState.PAUSED_RATING){
+            renderAboutPage();
+        }
+        else {
+            renderField();
+            renderFront();
+            renderScoreBar();
+            renderBox();
+            renderHeader();
+            renderCursor();
+            renderCurrentPlayer();
+            renderRules();
 
-        if(game.getState() == GameState.INPUT_ENTERED) inputHint();
+            if(game.getState() == GameState.INPUT_ENTERED) inputHint();
 
-        moveCursor(7, 19);
+            moveCursor(7, 19);
+        }
+    }
+
+    private void renderEnd() {
+        printHorizontalPattern("─", 31, 0, 0, "┌", "┐");
+        printVerticalPattern("│", 1, 1, 2);
+        printVerticalPattern("│", 1, 33, 2);
+        printHorizontalPattern("─", 31, 1, 3, "├", "┤");
+        printVerticalPattern("│ >>> ", 1, 1, 4);
+        printVerticalPattern("│", 1, 33, 4);
+        printHorizontalPattern("─", 31, 1, 5, "└", "┘");
+
+        printHorizontalPattern("◀GAME OVER!▶", 1, 12, 1);
+        if(game.getPlayer1().getScore() > game.getPlayer2().getScore()){
+            printHorizontalPattern("Player 1 won! Good job! ", 1, 2, 2);
+        }
+        moveCursor(33, 8);
     }
 
     private void renderCurrentPlayer() {
@@ -64,6 +116,24 @@ public class ConsoleUI implements UI {
     @Override
     public GameState handleInput() {
         Scanner scanner = new Scanner(System.in);
+
+        if(game.getState() == GameState.START_P1) {
+            String nickname1 = scanner.nextLine();
+            game.getPlayer1().setNickname(nickname1);
+
+            return GameState.START_P2;
+        }
+        else if(game.getState() == GameState.START_P2) {
+            String nickname2 = scanner.nextLine();
+            game.getPlayer2().setNickname(nickname2);
+
+            return GameState.IDLE;
+        }
+        else if(game.getState() == GameState.END){
+            scanner.nextLine();
+
+            return GameState.END;
+        }
 
         String input = scanner.nextLine();
         String processedInput = input.trim().toLowerCase();
@@ -104,8 +174,28 @@ public class ConsoleUI implements UI {
         else if (processedInput.matches("e(xit)?")) {
             return GameState.END;
         }
+        else if (processedInput.matches("s(core)?")) {
+            return GameState.PAUSED_SCORE;
+        }
+        else if (processedInput.matches("f(eedback)?")){
+            return GameState.PAUSED_RATING;
+        }
 
         return GameState.WRONG_INPUT;
+    }
+
+    public void renderStart(String player) {
+        printHorizontalPattern("─", 31, 0, 0, "┌", "┐");
+        printVerticalPattern("│", 1, 1, 2);
+        printVerticalPattern("│", 1, 33, 2);
+        printHorizontalPattern("─", 31, 1, 3, "├", "┤");
+        printVerticalPattern("│ >>> ", 1, 1, 4);
+        printVerticalPattern("│", 1, 33, 4);
+        printHorizontalPattern("─", 31, 1, 5, "└", "┘");
+
+        printHorizontalPattern("◀WELCOME TO SLIDE-A-LAMA!▶", 1, 5, 1);
+        printHorizontalPattern("Enter nickname for " + player + ":", 1, 2, 2);
+        moveCursor(7, 4);
     }
 
     @Override
@@ -160,7 +250,6 @@ public class ConsoleUI implements UI {
         }
         printHorizontalPattern("╙════╜", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3 + length);
     }
-
 
     private void renderScoreBar(){
         double scoreRelation = ((double) game.getPlayer1().getScore()) / (game.getPlayer1().getScore() + game.getPlayer2().getScore());
@@ -299,6 +388,49 @@ public class ConsoleUI implements UI {
         for (int i = 0; i < repeat; i++) {
             moveCursor(col, row + i);
             System.out.print(pattern);
+        }
+    }
+
+    private void renderAboutPage(){
+        printHorizontalPattern("─", 60, 1, 1, "┌" ,"┐");
+        printVerticalPattern("│", 20, 1, 2);
+        printVerticalPattern("│", 20, 62, 2);
+        printHorizontalPattern("─", 60, 0, 21, "└" ,"┘");
+
+        RatingService ratingService = new RatingServiceJDBC();
+        CommentService commentService = new CommentSericeJDBC();
+
+        int avgRating = ratingService.getAverageRating("Slide a Lama");
+        int rating = ratingService.getRating("Slide a Lama", game.getCurrentPlayer().getNickname());
+        List<Comment> comments = commentService.getComments("Slide a Lama");
+
+        printHorizontalPattern(ConsoleColors.GREEN_BOLD_BRIGHT + "COMMENTS & RATING" + ConsoleColors.RESET, 1, 25, 2);
+        printHorizontalPattern(ConsoleColors.GREEN_BOLD_BRIGHT + "YOUR RATING: " + ConsoleColors.RESET + getStars(rating), 1, 4, 3);
+        printHorizontalPattern(ConsoleColors.GREEN_BOLD_BRIGHT + "AVERAGE RATING: " + ConsoleColors.RESET + getStars(avgRating), 1, 4, 4);
+        printHorizontalPattern(ConsoleColors.GREEN_BOLD_BRIGHT + "3 LAST COMMENTS" + ConsoleColors.RESET, 1, 26, 6);
+
+        for(int i = 0; i < Math.min(3, comments.size()); i++){
+            Comment comment = comments.get(i);
+            printHorizontalPattern(ConsoleColors.BLUE_BOLD_BRIGHT + comment.getPlayer() + ConsoleColors.RESET, 1, 8, 8 + 3*i);
+            printHorizontalPattern(comment.getComment(), 1, 4, 9 + 3*i);
+        }
+    }
+
+    private void renderTopScores(){
+        printHorizontalPattern("─", 60, 1, 1, "┌" ,"┐");
+        printVerticalPattern("│", 12, 1, 2);
+        printVerticalPattern("│", 12, 62, 2);
+        printHorizontalPattern("─", 60, 0, 13, "└" ,"┘");
+
+        printHorizontalPattern(ConsoleColors.YELLOW_BOLD_BRIGHT + "TOP-10 SCORES" + ConsoleColors.RESET, 1, 24, 2);
+
+        ScoreService scoreService = new ScoreServiceJDBC();
+
+        List<Score> topScores = scoreService.getTopScores("Slide a Lama");
+
+        for(int i = 0; i < topScores.size(); i++){
+            Score score = topScores.get(i);
+            printHorizontalPattern(String.format("%15s", score.getPlayer()) + ": " + String.format("%-15s", score.getPoints()) + " " + score.getPlayedOn(), 1, 2, 3 + i);
         }
     }
 

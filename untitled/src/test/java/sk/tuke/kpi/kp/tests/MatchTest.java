@@ -1,8 +1,8 @@
 package sk.tuke.kpi.kp.tests;
 
 
-import junit.framework.TestCase;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import sk.tuke.kpi.kp.slidealama.core.Field;
 import sk.tuke.kpi.kp.slidealama.core.MatchResult;
 import sk.tuke.kpi.kp.slidealama.core.Tile;
@@ -27,7 +27,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(0, 0, 1, 5, 40, 3);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(0, 2, 0, 5, 20, 3);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
     @Test
@@ -67,7 +67,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(2, 1, 1, 4, 30, 2);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(1, 0, 0, 4, 10, 2);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
     @Test
@@ -107,7 +107,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(4, 0, 1, 3, 10, 1);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
     @Test
@@ -127,7 +127,7 @@ public class MatchTest {
 
         MatchResult valid = new MatchResult(2, 4, 0, 3, 100, 1);
 
-        TestCase.assertEquals(matchResult, valid);
+        Assertions.assertEquals(matchResult, valid);
     }
 
 }

@@ -1,10 +1,6 @@
 package sk.tuke.kpi.kp.tests;
 
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import sk.tuke.kpi.kp.slidealama.dao.model.Rating;
 import sk.tuke.kpi.kp.slidealama.dao.service.RatingService;
 import sk.tuke.kpi.kp.slidealama.dao.service.impl.RatingServiceJDBC;
@@ -34,7 +30,7 @@ public class RatingServiceTest {
 
         ratingService.setRating(rating);
 
-        Assertions.assertEquals(4, ratingService.getAverageRating("A")); // not 4.5
+        Assertions.assertEquals(4, ratingService.getRating("A", "B"));
     }
 
     @Order(3)
