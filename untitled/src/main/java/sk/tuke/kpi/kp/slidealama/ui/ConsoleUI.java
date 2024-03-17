@@ -161,6 +161,7 @@ public class ConsoleUI implements UI {
         printHorizontalPattern("╙════╜", 1, 2 * offset_x + game.getFieldSize() * 4 + 7, offset_y + 3 + length);
     }
 
+
     private void renderScoreBar(){
         double scoreRelation = ((double) game.getPlayer1().getScore()) / (game.getPlayer1().getScore() + game.getPlayer2().getScore());
         int player1BarLength = (int) Math.round(scoreRelation * 40);
