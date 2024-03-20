@@ -14,7 +14,7 @@ import java.util.Date;
 public class Main {
     private static boolean winCondition(Game game){
         double fraction = game.getPlayer1().getScore() / ((double) game.getPlayer2().getScore() + game.getPlayer1().getScore());
-        return fraction >= 0.51|| fraction <= 0.49;
+        return fraction >= 0.8|| fraction <= 0.2;
     }
 
     public static void main(String[] args) {
@@ -53,7 +53,7 @@ public class Main {
                 else game.setCurrentPlayer(game.getPlayer1());
             }
 
-            if(winCondition(game)){
+            if(winCondition(game) || state == GameState.FORCE_WIN){
                 ScoreService service = new ScoreServiceJDBC();
 
                 Score score1 = new Score("Slide a Lama", game.getPlayer1().getNickname(), game.getPlayer1().getScore(), new Date());

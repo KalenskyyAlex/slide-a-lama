@@ -47,19 +47,19 @@ public class Field {
             case LEFT -> {
                 boolean leadingEmpty = false;
 
-//                for(int j = 0; j > 0; j--){
-//                    if(tiles[tiles.length - pos - 1][j] == Tile.EMPTY) {
-//                        tiles[j][pos] = front.pull();
-//                        leadingEmpty = true;
-//                        break;
-//                    }
-//                }
+                int lastEmptyIndex = 0;
+                while(tiles[tiles.length - pos - 1][lastEmptyIndex] == Tile.EMPTY){
+                    leadingEmpty = true;
+                    lastEmptyIndex++;
+                }
+                lastEmptyIndex--;
 
                 if(!leadingEmpty){
                     int start;
                     for(start = 0; start < tiles.length; start++){
                         if(tiles[tiles.length - pos - 1][start] == Tile.EMPTY) break;
                     }
+                    if(start == tiles.length) start--;
 
                     for(int j = start; j > 0; j--){
                         tiles[tiles.length - pos - 1][j] = tiles[tiles.length - pos - 1][j - 1];
@@ -67,13 +67,37 @@ public class Field {
 
                     tiles[tiles.length - pos - 1][0] = front.pull();
                 }
+                else{
+                    tiles[tiles.length - pos - 1][lastEmptyIndex] = front.pull();
+                }
             }
             case RIGHT -> {
-                for(int j = 0; j < tiles.length - 1; j++){
-                    tiles[pos][j] = tiles[pos][j + 1];
+                boolean leadingEmpty = false;
+
+                int lastEmptyIndex = tiles.length - 1;
+                while(tiles[pos][lastEmptyIndex] == Tile.EMPTY){
+                    leadingEmpty = true;
+                    lastEmptyIndex--;
+                }
+                lastEmptyIndex++;
+
+                if(!leadingEmpty){
+                    int start;
+                    for(start = tiles.length - 1; start >= 0; start--){
+                        if(tiles[pos][start] == Tile.EMPTY) break;
+                    }
+                    if(start == -1) start++;
+
+                    for(int j = start; j < tiles.length - 1; j++){
+                        tiles[pos][j] = tiles[pos][j + 1];
+                    }
+
+                    tiles[pos][tiles.length - 1] = front.pull();
+                }
+                else {
+                    tiles[pos][lastEmptyIndex] = front.pull();
                 }
 
-                tiles[pos][tiles.length - 1] = front.pull();
             }
         }
 

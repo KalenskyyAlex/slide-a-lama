@@ -26,7 +26,6 @@ public class Game {
         return field.getTiles();
     }
 
-
     public GameState getState() {
         return state;
     }

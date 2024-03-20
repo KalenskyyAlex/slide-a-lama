@@ -1,11 +1,11 @@
 package sk.tuke.kpi.kp.slidealama.ui;
 
-import sk.tuke.kpi.kp.slidealama.Main;
 import sk.tuke.kpi.kp.slidealama.core.Cursor;
 import sk.tuke.kpi.kp.slidealama.core.Game;
 import sk.tuke.kpi.kp.slidealama.core.GameState;
 import sk.tuke.kpi.kp.slidealama.core.Tile;
 import sk.tuke.kpi.kp.slidealama.dao.model.Comment;
+import sk.tuke.kpi.kp.slidealama.dao.model.Rating;
 import sk.tuke.kpi.kp.slidealama.dao.model.Score;
 import sk.tuke.kpi.kp.slidealama.dao.service.CommentService;
 import sk.tuke.kpi.kp.slidealama.dao.service.RatingService;
@@ -16,6 +16,8 @@ import sk.tuke.kpi.kp.slidealama.dao.service.impl.ScoreServiceJDBC;
 import sk.tuke.kpi.kp.slidealama.utils.ConsoleColors;
 import sk.tuke.kpi.kp.slidealama.utils.ConsoleItemUtil;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -86,19 +88,94 @@ public class ConsoleUI implements UI {
     }
 
     private void renderEnd() {
-        printHorizontalPattern("─", 31, 0, 0, "┌", "┐");
-        printVerticalPattern("│", 1, 1, 2);
-        printVerticalPattern("│", 1, 33, 2);
-        printHorizontalPattern("─", 31, 1, 3, "├", "┤");
-        printVerticalPattern("│ >>> ", 1, 1, 4);
-        printVerticalPattern("│", 1, 33, 4);
-        printHorizontalPattern("─", 31, 1, 5, "└", "┘");
+        printHorizontalPattern("─", 40, 0, 0, "┌", "┐");
+        printVerticalPattern("│", 2, 1, 2);
+        printVerticalPattern("│", 2, 42, 2);
+        printHorizontalPattern("─", 40, 1, 4, "├", "┤");
+        printVerticalPattern("│ >>> ", 1, 1, 5);
+        printVerticalPattern("│", 1, 42, 5);
+        printHorizontalPattern("─", 40, 1, 6, "└", "┘");
 
-        printHorizontalPattern("◀GAME OVER!▶", 1, 12, 1);
+        printHorizontalPattern("◀ GAME OVER! ▶", 1, 15, 1);
         if(game.getPlayer1().getScore() > game.getPlayer2().getScore()){
-            printHorizontalPattern("Player 1 won! Good job! ", 1, 2, 2);
+            printHorizontalPattern("Player 1 won! Good job! ", 1, 3, 2);
         }
-        moveCursor(33, 8);
+        else{
+            printHorizontalPattern("Player 2 won! Good job! ", 1, 3, 2);
+        }
+        printHorizontalPattern("Want to leave a comment(yes/no)", 1, 3, 3);
+        moveCursor(8, 5);
+
+        Scanner s = new Scanner(System.in);
+        String input = s.nextLine().toLowerCase().trim();
+        printHorizontalPattern("                                  ", 1, 8, 5);
+        if(input.matches("y(es)?")){
+            printHorizontalPattern("Enter a comment (Player 1)      ", 1, 3, 2);
+            printHorizontalPattern("                                ", 1, 3, 3);
+
+            printHorizontalPattern("                                  ", 1, 8, 5);
+            moveCursor(8, 5);
+            String comment = s.nextLine();
+
+
+            while (true){
+                printHorizontalPattern("Enter a rating(1-5) (Player 1)  ", 1, 3, 2);
+                printHorizontalPattern("                                ", 1, 3, 3);
+
+                printHorizontalPattern("                                  ", 1, 8, 5);
+                moveCursor(8, 5);
+                String rating = s.nextLine().trim();
+
+                if(rating.matches("\\d+")){
+                    int r = Integer.parseInt(rating);
+                    if(r > 0 && r <= 5) {
+                        Comment commentObj = new Comment("Slide a Lama", comment, game.getPlayer1().getNickname(), new Timestamp(new Date().getTime()));
+                        Rating ratingObj = new Rating("Slide a Lama", r, game.getPlayer1().getNickname(), new Timestamp(new Date().getTime()));
+
+                        CommentService commentService = new CommentSericeJDBC();
+                        RatingService ratingService = new RatingServiceJDBC();
+
+                        commentService.addComment(commentObj);
+                        ratingService.setRating(ratingObj);
+
+                        break;
+                    }
+                }
+            }
+
+            printHorizontalPattern("Enter a comment (Player 2)      ", 1, 3, 2);
+            printHorizontalPattern("                                ", 1, 3, 3);
+
+            printHorizontalPattern("                                  ", 1, 8, 5);
+            moveCursor(8, 5);
+            comment = s.nextLine();
+
+
+            while (true){
+                printHorizontalPattern("Enter a rating(1-5) (Player 2)  ", 1, 3, 2);
+                printHorizontalPattern("                                ", 1, 3, 3);
+
+                printHorizontalPattern("                                  ", 1, 8, 5);
+                moveCursor(8, 5);
+                String rating = s.nextLine().trim();
+
+                if(rating.matches("\\d+")){
+                    int r = Integer.parseInt(rating);
+                    if(r > 0 && r <= 5) {
+                        Comment commentObj = new Comment("Slide a Lama", comment, game.getPlayer2().getNickname(), new Timestamp(new Date().getTime()));
+                        Rating ratingObj = new Rating("Slide a Lama", r, game.getPlayer2().getNickname(), new Timestamp(new Date().getTime()));
+
+                        CommentService commentService = new CommentSericeJDBC();
+                        RatingService ratingService = new RatingServiceJDBC();
+
+                        commentService.addComment(commentObj);
+                        ratingService.setRating(ratingObj);
+
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     private void renderCurrentPlayer() {
@@ -179,6 +256,9 @@ public class ConsoleUI implements UI {
         }
         else if (processedInput.matches("f(eedback)?")){
             return GameState.PAUSED_RATING;
+        }
+        else if (processedInput.matches("w(in)?")){
+            return GameState.FORCE_WIN;
         }
 
         return GameState.WRONG_INPUT;
