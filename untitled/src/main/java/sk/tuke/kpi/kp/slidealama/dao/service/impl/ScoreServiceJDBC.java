@@ -15,7 +15,7 @@ public class ScoreServiceJDBC implements ScoreService {
     public static final String USER = "postgres";
     public static final String PASSWORD = "postgres";
     public static final String SELECT = "SELECT game, player, points, playedOn FROM score WHERE game = ? ORDER BY points DESC LIMIT 10";
-    public static final String DELETE = "DELETE FROM score";
+    public static final String DELETE = "DELETE FROM score WHERE game = ?";
     public static final String INSERT = "INSERT INTO score (game, player, points, playedOn) VALUES (?, ?, ?, ?)";
 
     @Override
@@ -52,11 +52,13 @@ public class ScoreServiceJDBC implements ScoreService {
     }
 
     @Override
-    public void reset() {
+    public void reset(String game) {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(DELETE);
         ) {
-            statement.executeUpdate(DELETE);
+            statement.setString(1, game);
+
+            statement.executeUpdate();
         } catch (SQLException e) {
             throw new ScoreException("Problem deleting score", e);
         }

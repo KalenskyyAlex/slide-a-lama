@@ -19,27 +19,27 @@ public class CommentServiceTest {
     @Order(1)
     @Test
     public void testAddNewCommentNotThrowsAnException(){
-        commentService.addComment(new Comment("Slide a Lama", "Nice game", "Alex", new Timestamp(new Date().getTime())));
+        commentService.addComment(new Comment("A", "Nice game", "Alex", new Timestamp(new Date().getTime())));
     }
 
     @Order(2)
     @Test
     public void testCommentAddedSuccessfully(){
-        List<Comment> results = commentService.getComments("Slide a Lama");
+        List<Comment> results = commentService.getComments("A");
 
         Assertions.assertFalse(results.isEmpty());
         Assertions.assertEquals(results.size(), 1);
         Assertions.assertEquals(results.get(0).getComment(), "Nice game");
-        Assertions.assertEquals(results.get(0).getGame(), "Slide a Lama");
+        Assertions.assertEquals(results.get(0).getGame(), "A");
         Assertions.assertEquals(results.get(0).getPlayer(), "Alex");
     }
 
     @Order(3)
     @Test
     public void testCommentsDelete(){
-        commentService.reset();
+        commentService.reset("A");
 
-        Assertions.assertEquals(commentService.getComments("Slide a Lama").size(), 0);
+        Assertions.assertEquals(commentService.getComments("A").size(), 0);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class CommentServiceTest {
 
         Assertions.assertEquals(results, testBatch);
 
-        commentService.reset();
+        commentService.reset("A");
     }
 
 }

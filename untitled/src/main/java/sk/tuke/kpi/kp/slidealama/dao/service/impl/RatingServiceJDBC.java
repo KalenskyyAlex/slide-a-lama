@@ -15,7 +15,7 @@ public class RatingServiceJDBC implements RatingService {
     public static final String INSERT = "INSERT INTO rating (player, game, rating, ratedOn) VALUES (?, ?, ?, ?)";
     public static final String UPDATE = "UPDATE rating SET rating = ?, ratedOn = ? WHERE player = ? and game = ?";
     public static final String AVG_RATING = "SELECT AVG(rating) FROM rating WHERE game = ?";
-    public static final String DELETE = "DELETE FROM rating";
+    public static final String DELETE = "DELETE FROM rating WHERE game = ?";
     public static final String CONFILCT = "SELECT rating FROM rating WHERE player = ? and game = ?";
 
 
@@ -85,11 +85,13 @@ public class RatingServiceJDBC implements RatingService {
     }
 
     @Override
-    public void reset() throws RatingException {
+    public void reset(String game) throws RatingException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(DELETE);
         ) {
-            statement.executeUpdate(DELETE);
+            statement.setString(1, game);
+
+            statement.executeUpdate();
         } catch (SQLException e) {
             throw new RatingException("Problem deleting ratings", e);
         }

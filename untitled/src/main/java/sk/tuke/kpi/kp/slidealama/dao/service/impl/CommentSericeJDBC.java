@@ -13,7 +13,7 @@ public class CommentSericeJDBC implements CommentService {
     public static final String USER = "postgres";
     public static final String PASSWORD = "postgres";
     public static final String SELECT = "SELECT game, comment, player, commentedOn FROM comment WHERE game = ? ORDER BY commentedOn DESC";
-    public static final String DELETE = "DELETE FROM comment";
+    public static final String DELETE = "DELETE FROM comment WHERE game = ?";
     public static final String INSERT = "INSERT INTO comment (game, comment, player, commentedOn) VALUES (?, ?, ?, ?)";
 
     @Override
@@ -50,11 +50,12 @@ public class CommentSericeJDBC implements CommentService {
     }
 
     @Override
-    public void reset() throws CommentException {
+    public void reset(String game) throws CommentException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(DELETE);
         ) {
-            statement.executeUpdate(DELETE);
+            statement.setString(1, game);
+            statement.executeUpdate();
         } catch (SQLException e) {
             throw new CommentException("Problem deleting comments", e);
         }

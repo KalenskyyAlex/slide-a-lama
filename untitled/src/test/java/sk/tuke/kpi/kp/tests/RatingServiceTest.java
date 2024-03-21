@@ -36,7 +36,7 @@ public class RatingServiceTest {
     @Order(3)
     @Test
     public void testDeleteRating_and_ratingNotFound(){
-        ratingService.reset();
+        ratingService.reset("A");
 
         Assertions.assertEquals(-1, ratingService.getRating("A", "B")); // not found
     }
@@ -56,6 +56,8 @@ public class RatingServiceTest {
         }
 
         Assertions.assertEquals(3, ratingService.getAverageRating("A"));
+
+        ratingService.reset("A");
     }
 
 }
