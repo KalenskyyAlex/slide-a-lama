@@ -14,6 +14,7 @@
 	<name>gamestudio</name>
 	<description>gamestudio</description>
 	<properties>
+		<start-class>sk.tuke.kpi.kp.gamestudio.SpringService</start-class>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -17,8 +17,7 @@
             <property name="connection.autocommit" value="true" />
             <property name="hibernate.allow_update_outside_transaction" value="true"/>
 
-            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
-            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+            <property name="hibernate.show_sql" value="false" /> <!-- Show SQL in console -->
         </properties>
 
     </persistence-unit>
