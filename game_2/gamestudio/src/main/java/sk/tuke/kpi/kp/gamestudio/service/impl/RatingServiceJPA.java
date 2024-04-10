@@ -39,7 +39,9 @@ public class RatingServiceJPA implements RatingService {
 
     @Override
     public void reset(String game) throws RatingException {
+        entityManager.getTransaction().begin();
         entityManager.createNamedQuery("Rating.reset").setParameter("game", game).executeUpdate();
+        entityManager.getTransaction().commit();
     }
 
 }

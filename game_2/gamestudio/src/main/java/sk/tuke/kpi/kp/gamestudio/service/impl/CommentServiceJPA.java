@@ -30,7 +30,9 @@ public class CommentServiceJPA implements CommentService {
 
     @Override
     public void reset(String game) throws CommentException {
+        entityManager.getTransaction().begin();
         entityManager.createNamedQuery("Comment.reset").setParameter("game", game).executeUpdate();
+        entityManager.getTransaction().commit();
     }
 
 }

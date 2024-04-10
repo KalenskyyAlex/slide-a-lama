@@ -15,6 +15,7 @@ import sk.tuke.kpi.kp.gamestudio.game.utils.ConsoleColors;
 import sk.tuke.kpi.kp.gamestudio.game.utils.ConsoleItemUtil;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -69,6 +70,9 @@ public class ConsoleUI implements UI {
         else if(game.getState() == GameState.PAUSED_RATING){
             renderAboutPage();
         }
+        else if(game.getState() == GameState.REST_TEST){
+            renderRestTest();
+        }
         else {
             renderField();
             renderFront();
@@ -83,6 +87,71 @@ public class ConsoleUI implements UI {
 
             moveCursor(7, 19);
         }
+    }
+
+    private void renderRestTest() {
+        System.out.print(ConsoleColors.CLEAR_CONSOLE);
+        System.out.flush();
+
+        ScoreServiceRestClient scoreServiceRestClient = new ScoreServiceRestClient();
+        Score s1 = new Score("test", "player 1", 1000, new Date());
+        scoreServiceRestClient.addScore(s1);
+        System.out.println("Testing POST " + s1 + " on http://localhost:8080/api/score");
+        System.out.println("\tResponse: OK");
+        Score s2 = new Score("test", "player 2", 1500, new Date());
+        scoreServiceRestClient.addScore(s2);
+        System.out.println("Testing POST " + s2 + " on http://localhost:8080/api/score");
+        System.out.println("\tResponse: OK");
+        System.out.println("Testing GET on http://localhost:8080/api/score/test");
+        List<Score> scores = scoreServiceRestClient.getTopScores("test");
+        System.out.println("\tResponse:");
+        for(Score s: scores){
+            System.out.println("\t\t" + s);
+        }
+        System.out.print("Testing DELETE on http://localhost:8080/api/score/test");
+        scoreServiceRestClient.reset("test");
+        System.out.println("\tResponse: OK");
+        System.out.println("Testing GET on http://localhost:8080/api/score/test");
+        System.out.println("\tResponse:\n\t\t<empty set>");
+
+        System.out.println();
+
+        CommentServiceRestClient commentServiceRestClient = new CommentServiceRestClient();
+        Comment comment1 = new Comment("test", "player 1", "good comment", new Timestamp(new Date().getTime()));
+        Comment comment2 = new Comment("test", "player 2", "bad comment", new Timestamp(new Date().getTime()));
+        commentServiceRestClient.addComment(comment1);
+        commentServiceRestClient.addComment(comment2);
+        System.out.println("Testing POST " + comment1 + " on http://localhost:8080/api/comment");
+        System.out.println("\tResponse: OK");
+        System.out.println("Testing POST " + comment2 + " on http://localhost:8080/api/comment");
+        System.out.println("\tResponse: OK");
+        System.out.println("Testing GET on http://localhost:8080/api/comment/test");
+        List<Comment> comments = commentServiceRestClient.getComments("test");
+        System.out.println("\tResponse:");
+        for(Comment c: comments){
+            System.out.println("\t\t" + c);
+        }
+        System.out.print("Testing DELETE on http://localhost:8080/api/comment/test");
+        commentServiceRestClient.reset("test");
+        System.out.println("\tResponse: OK");
+        System.out.println("Testing GET on http://localhost:8080/api/comment/test");
+        System.out.println("\tResponse:\n\t\t<empty set>");
+        System.out.println();
+
+        RatingServiceRestClient ratingServiceRestClient = new RatingServiceRestClient();
+        Rating rating1 = new Rating("test", 5, "player1", new Timestamp(new Date().getTime()));
+        System.out.println("Testing POST " + rating1 + " on http://localhost:8080/api/rating");
+        System.out.println("\tResponse: OK");
+        ratingServiceRestClient.setRating(rating1);
+        System.out.println("Testing GET on http://localhost:8080/api/rating/test/player1");
+        int responce = ratingServiceRestClient.getRating("test", "player1");
+        System.out.println("\tResponse: " + responce);
+        System.out.println("Testing GET on http://localhost:8080/api/rating/test/average");
+        responce = ratingServiceRestClient.getAverageRating("test");
+        System.out.println("\tResponse: " + responce);
+        System.out.println("Testing DELETE on http://localhost:8080/api/rating/test");
+        ratingServiceRestClient.reset("test");
+        System.out.println("\tResponse: OK");
     }
 
     private void renderEnd() {
@@ -257,6 +326,9 @@ public class ConsoleUI implements UI {
         }
         else if (processedInput.matches("w(in)?")){
             return GameState.FORCE_WIN;
+        }
+        else if (processedInput.matches("rest test")){
+            return GameState.REST_TEST;
         }
 
         return GameState.WRONG_INPUT;

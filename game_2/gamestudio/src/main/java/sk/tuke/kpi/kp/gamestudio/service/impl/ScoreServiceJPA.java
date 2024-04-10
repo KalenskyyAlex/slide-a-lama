@@ -31,6 +31,8 @@ public class ScoreServiceJPA implements ScoreService {
 
     @Override
     public void reset(String game) {
+        entityManager.getTransaction().begin();
         entityManager.createNamedQuery("Score.resetScores").setParameter("game", game).executeUpdate();
+        entityManager.getTransaction().commit();
     }
 }
