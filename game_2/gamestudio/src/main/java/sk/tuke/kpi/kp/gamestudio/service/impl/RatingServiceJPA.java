@@ -2,6 +2,7 @@ package sk.tuke.kpi.kp.gamestudio.service.impl;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.Persistence;
 import org.springframework.transaction.annotation.Transactional;
 import sk.tuke.kpi.kp.gamestudio.entity.Rating;
@@ -28,7 +29,12 @@ public class RatingServiceJPA implements RatingService {
 
     @Override
     public int getRating(String game, String player) throws RatingException {
-        return ((Number) entityManager.createNamedQuery("Rating.getRating").setParameter("game", game).setParameter("player", player).getSingleResult()).intValue();
+        try {
+            return ((Number) entityManager.createNamedQuery("Rating.getRating").setParameter("game", game).setParameter("player", player).getSingleResult()).intValue();
+        }
+        catch (NoResultException e) {
+            return -1;
+        }
     }
 
     @Override

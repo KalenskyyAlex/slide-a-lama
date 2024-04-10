@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @NamedQuery(name = "Comment.reset",
             query = "DELETE FROM Comment WHERE game = :game")
 @NamedQuery(name = "Comment.getComments",
-            query = "SELECT game, comment, player, commentedOn FROM Comment WHERE game = :game ORDER BY commentedOn DESC")
+            query = "SELECT comment FROM Comment comment WHERE game = :game ORDER BY commentedOn DESC")
 public class Comment implements Serializable {
 
     @Id
