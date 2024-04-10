@@ -1,8 +1,9 @@
 package sk.tuke.kpi.kp.gamestudio.service.impl;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import org.springframework.transaction.annotation.Transactional;
 import sk.tuke.kpi.kp.gamestudio.entity.Score;
 import sk.tuke.kpi.kp.gamestudio.service.ScoreException;
 import sk.tuke.kpi.kp.gamestudio.service.ScoreService;
@@ -12,12 +13,14 @@ import java.util.List;
 @Transactional
 public class ScoreServiceJPA implements ScoreService {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("gamestudio");
+    EntityManager entityManager = emf.createEntityManager();
 
     @Override
     public void addScore(Score score) throws ScoreException {
+        entityManager.getTransaction().begin();
         entityManager.persist(score);
+        entityManager.getTransaction().commit();
     }
 
     @Override

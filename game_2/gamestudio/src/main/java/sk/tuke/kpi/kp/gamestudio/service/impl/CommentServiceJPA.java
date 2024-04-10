@@ -1,23 +1,26 @@
 package sk.tuke.kpi.kp.gamestudio.service.impl;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import sk.tuke.kpi.kp.gamestudio.entity.Comment;
 import sk.tuke.kpi.kp.gamestudio.service.CommentException;
 import sk.tuke.kpi.kp.gamestudio.service.CommentService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Transactional
 public class CommentServiceJPA implements CommentService {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("gamestudio");
+    EntityManager entityManager = emf.createEntityManager();
 
     @Override
     public void addComment(Comment comment) throws CommentException {
+        entityManager.getTransaction().begin();
         entityManager.persist(comment);
+        entityManager.getTransaction().commit();
     }
 
     @Override

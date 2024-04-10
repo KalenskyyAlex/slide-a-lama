@@ -3,8 +3,9 @@ package sk.tuke.kpi.kp.gamestudio;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import sk.tuke.kpi.kp.gamestudio.entity.Score;
 import sk.tuke.kpi.kp.gamestudio.game.core.Game;
 import sk.tuke.kpi.kp.gamestudio.game.core.GameState;
@@ -12,13 +13,11 @@ import sk.tuke.kpi.kp.gamestudio.game.core.MatchResult;
 import sk.tuke.kpi.kp.gamestudio.game.ui.ConsoleUI;
 import sk.tuke.kpi.kp.gamestudio.game.ui.UI;
 import sk.tuke.kpi.kp.gamestudio.service.ScoreService;
-import sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJDBC;
 import sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA;
 
 import java.util.Date;
 
 @SpringBootApplication
-@EntityScan("sk.tuke.kpi.kp.gamestudio.entity")
 public class GamestudioApplication {
 
 	private static boolean winCondition(Game game){
@@ -85,4 +84,19 @@ public class GamestudioApplication {
 			ui.render();
 		};
 	}
+
+//	@Bean(name="entityManagerFactory")
+//	public LocalSessionFactoryBean sessionFactory() {
+//		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+//
+//		return sessionFactory;
+//	}
+
+//	@Bean
+//	public LocalEntityManagerFactoryBean entityManagerFactory(){
+//		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
+//		factoryBean.setPersistenceUnitName("gamestudio");
+//		return factoryBean;
+//	}
+
 }

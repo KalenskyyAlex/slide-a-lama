@@ -1,8 +1,9 @@
 package sk.tuke.kpi.kp.gamestudio.service.impl;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import org.springframework.transaction.annotation.Transactional;
 import sk.tuke.kpi.kp.gamestudio.entity.Rating;
 import sk.tuke.kpi.kp.gamestudio.service.RatingException;
 import sk.tuke.kpi.kp.gamestudio.service.RatingService;
@@ -10,12 +11,14 @@ import sk.tuke.kpi.kp.gamestudio.service.RatingService;
 @Transactional
 public class RatingServiceJPA implements RatingService {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("gamestudio");
+    EntityManager entityManager = emf.createEntityManager();
 
     @Override
     public void setRating(Rating rating) throws RatingException {
+        entityManager.getTransaction().begin();
         entityManager.merge(rating);
+        entityManager.getTransaction().commit();
     }
 
     @Override
