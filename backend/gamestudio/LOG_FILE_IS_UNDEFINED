@@ -1,0 +1,19 @@
+2024-04-10T16:08:21.095+02:00  INFO 18084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 18084 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:08:21.096+02:00  INFO 18084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:08:21.117+02:00  INFO 18084 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:08:21.317+02:00  INFO 18084 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:08:21.329+02:00  INFO 18084 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:08:21.499+02:00  INFO 18084 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:08:21.520+02:00  INFO 18084 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:08:21.534+02:00  INFO 18084 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:08:21.630+02:00  INFO 18084 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:08:21.641+02:00  INFO 18084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:08:21.693+02:00  INFO 18084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3eab76e5
+2024-04-10T16:08:21.694+02:00  INFO 18084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:08:22.072+02:00  INFO 18084 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:08:22.226+02:00  INFO 18084 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:08:22.311+02:00  INFO 18084 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:08:22.329+02:00  INFO 18084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.472 seconds (process running for 1.767)
+2024-04-10T16:08:28.701+02:00  INFO 18084 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:08:28.702+02:00  INFO 18084 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:08:28.703+02:00  INFO 18084 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

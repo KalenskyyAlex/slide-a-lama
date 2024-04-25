@@ -1,0 +1,1228 @@
+2024-04-10T16:00:13.528+02:00  INFO 15912 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 15912 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:00:13.529+02:00  INFO 15912 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:00:13.551+02:00  INFO 15912 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:00:13.749+02:00  INFO 15912 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:00:13.760+02:00  INFO 15912 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:00:13.928+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:00:13.951+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:00:13.965+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:00:14.068+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:00:14.080+02:00  INFO 15912 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:00:14.128+02:00  INFO 15912 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7eecce2e
+2024-04-10T16:00:14.129+02:00  INFO 15912 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:00:14.524+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:00:14.685+02:00  INFO 15912 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:00:14.769+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:00:14.791+02:00  INFO 15912 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.497 seconds (process running for 1.809)
+2024-04-10T16:00:21.014+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:00:21.015+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:00:21.045+02:00  WARN 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:00:21.046+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:00:21.046+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:00:21.046+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:00:21.046+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:00:21.047+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:00:21.056+02:00  WARN 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:00:21.093+02:00  INFO 15912 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:00:21.096+02:00  INFO 15912 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@767e4d4c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:00:25.561+02:00  INFO 15912 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:00:25.562+02:00  INFO 15912 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:00:25.563+02:00  INFO 15912 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:00:55.540+02:00  INFO 16316 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication v0.0.1-SNAPSHOT using Java 17.0.9 with PID 16316 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/gamestudio-0.0.1-SNAPSHOT.jar started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:00:55.541+02:00  INFO 16316 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:00:55.826+02:00  INFO 16316 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:00:55.839+02:00  INFO 16316 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:00:56.061+02:00  INFO 16316 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:00:56.096+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:00:56.127+02:00  INFO 16316 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:00:56.288+02:00  INFO 16316 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:00:56.304+02:00  INFO 16316 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:00:56.393+02:00  INFO 16316 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@553da911
+2024-04-10T16:00:56.394+02:00  INFO 16316 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:00:56.933+02:00  INFO 16316 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:00:57.119+02:00  INFO 16316 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:00:57.217+02:00  INFO 16316 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 2.058 seconds (process running for 2.335)
+2024-04-10T16:01:00.367+02:00  INFO 16316 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:01:00.368+02:00  INFO 16316 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:01:00.451+02:00  WARN 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:01:00.451+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:01:00.451+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:01:00.452+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:01:00.452+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:01:00.453+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:01:00.465+02:00  WARN 16316 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:01:00.531+02:00  INFO 16316 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:01:00.536+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@569b3009] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:01:02.944+02:00  INFO 16316 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:01:02.946+02:00  INFO 16316 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:01:02.993+02:00  WARN 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:01:02.993+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:01:02.993+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:01:02.993+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:01:02.993+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:01:02.993+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:01:03.001+02:00  WARN 16316 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:01:03.034+02:00  INFO 16316 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:01:03.036+02:00  INFO 16316 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@bc85538] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:01:07.490+02:00  INFO 16316 --- [gamestudio] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:01:07.500+02:00 ERROR 16316 --- [gamestudio] [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: Cannot invoke "jakarta.persistence.EntityManager.persist(Object)" because "this.entityManager" is null
+	at sk.tuke.kpi.kp.gamestudio.service.impl.CommentServiceJPA.addComment(CommentServiceJPA.java:20)
+	at sk.tuke.kpi.kp.gamestudio.game.ui.ConsoleUI.renderEnd(ConsoleUI.java:136)
+	at sk.tuke.kpi.kp.gamestudio.game.ui.ConsoleUI.render(ConsoleUI.java:64)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:83)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58)
+
+2024-04-10T16:01:07.503+02:00  INFO 16316 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:01:07.504+02:00  INFO 16316 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:01:07.505+02:00  INFO 16316 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:01:11.004+02:00  INFO 16380 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication v0.0.1-SNAPSHOT using Java 17.0.9 with PID 16380 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/gamestudio-0.0.1-SNAPSHOT.jar started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:01:11.006+02:00  INFO 16380 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:01:11.283+02:00  INFO 16380 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:01:11.298+02:00  INFO 16380 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:01:11.516+02:00  INFO 16380 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:01:11.550+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:01:11.582+02:00  INFO 16380 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:01:11.719+02:00  INFO 16380 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:01:11.735+02:00  INFO 16380 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:01:11.808+02:00  INFO 16380 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@327e5be5
+2024-04-10T16:01:11.809+02:00  INFO 16380 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:01:12.323+02:00  INFO 16380 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:01:12.505+02:00  INFO 16380 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:01:12.603+02:00  INFO 16380 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.963 seconds (process running for 2.263)
+2024-04-10T16:01:16.525+02:00  INFO 16380 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:01:16.526+02:00  INFO 16380 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:01:16.607+02:00  WARN 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:01:16.608+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:01:16.608+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:01:16.608+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:01:16.608+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:01:16.609+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:01:16.621+02:00  WARN 16380 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:01:16.667+02:00  INFO 16380 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:01:16.671+02:00  INFO 16380 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ad57db1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:01:30.637+02:00  INFO 16380 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:01:30.640+02:00  INFO 16380 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:01:30.643+02:00  INFO 16380 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:01:55.522+02:00  INFO 16527 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 16527 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:01:55.523+02:00  INFO 16527 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:01:55.546+02:00  INFO 16527 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:01:55.733+02:00  INFO 16527 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:01:55.744+02:00  INFO 16527 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:01:55.915+02:00  INFO 16527 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:01:55.936+02:00  INFO 16527 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:01:55.950+02:00  INFO 16527 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:01:56.047+02:00  INFO 16527 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:01:56.057+02:00  INFO 16527 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:01:56.102+02:00  INFO 16527 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@382cc51b
+2024-04-10T16:01:56.103+02:00  INFO 16527 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:01:56.482+02:00  INFO 16527 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:01:56.634+02:00  INFO 16527 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:01:56.720+02:00  INFO 16527 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:01:56.735+02:00  INFO 16527 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.464 seconds (process running for 1.776)
+2024-04-10T16:02:04.218+02:00  INFO 16527 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:02:04.227+02:00 ERROR 16527 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: Cannot invoke "jakarta.persistence.EntityManager.createNamedQuery(String)" because "this.entityManager" is null
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.getTopScores(ScoreServiceJPA.java:29)
+	at sk.tuke.kpi.kp.gamestudio.game.ui.ConsoleUI.renderTopScores(ConsoleUI.java:507)
+	at sk.tuke.kpi.kp.gamestudio.game.ui.ConsoleUI.render(ConsoleUI.java:67)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:52)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+
+2024-04-10T16:02:04.231+02:00  INFO 16527 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:02:04.232+02:00  INFO 16527 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:02:04.233+02:00  INFO 16527 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:02:32.905+02:00  INFO 16676 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 16676 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:02:32.905+02:00  INFO 16676 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:02:32.927+02:00  INFO 16676 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:02:33.143+02:00  INFO 16676 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:02:33.155+02:00  INFO 16676 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:02:33.343+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:02:33.371+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:02:33.387+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:02:33.489+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:02:33.506+02:00  INFO 16676 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:02:33.559+02:00  INFO 16676 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b27d12b
+2024-04-10T16:02:33.560+02:00  INFO 16676 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:02:33.987+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:02:34.165+02:00  INFO 16676 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:02:34.251+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:02:34.270+02:00  INFO 16676 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.633 seconds (process running for 2.028)
+2024-04-10T16:02:37.361+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:02:37.362+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:02:37.394+02:00  WARN 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:02:37.394+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:02:37.395+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:02:37.395+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:02:37.395+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:02:37.396+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:02:37.406+02:00  WARN 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:02:37.447+02:00  INFO 16676 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:02:37.450+02:00  INFO 16676 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@499c393c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:03:12.435+02:00  INFO 16676 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:03:12.437+02:00  INFO 16676 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:03:12.438+02:00  INFO 16676 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:03:46.303+02:00  INFO 16883 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 16883 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:03:46.304+02:00  INFO 16883 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:03:46.325+02:00  INFO 16883 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:03:46.523+02:00  INFO 16883 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:03:46.534+02:00  INFO 16883 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:03:46.707+02:00  INFO 16883 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:03:46.728+02:00  INFO 16883 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:03:46.741+02:00  INFO 16883 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:03:46.837+02:00  INFO 16883 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:03:46.847+02:00  INFO 16883 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:03:46.894+02:00  INFO 16883 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7eecce2e
+2024-04-10T16:03:46.894+02:00  INFO 16883 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:03:47.312+02:00  INFO 16883 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:03:47.468+02:00  INFO 16883 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:03:47.552+02:00  INFO 16883 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:03:47.570+02:00  INFO 16883 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.504 seconds (process running for 1.818)
+2024-04-10T16:04:01.018+02:00  INFO 16883 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:04:01.020+02:00  INFO 16883 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:04:01.021+02:00  INFO 16883 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:04:06.964+02:00  INFO 17084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 17084 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:04:06.965+02:00  INFO 17084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:04:06.986+02:00  INFO 17084 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:04:07.178+02:00  INFO 17084 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:04:07.189+02:00  INFO 17084 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:04:07.366+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:04:07.388+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:04:07.403+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:04:07.507+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:04:07.518+02:00  INFO 17084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:04:07.567+02:00  INFO 17084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@431603b6
+2024-04-10T16:04:07.568+02:00  INFO 17084 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:04:07.947+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:04:08.098+02:00  INFO 17084 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:04:08.179+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:04:08.196+02:00  INFO 17084 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.496 seconds (process running for 1.821)
+2024-04-10T16:04:13.298+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:04:13.299+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:04:13.327+02:00  WARN 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:04:13.327+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:04:13.327+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:04:13.327+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:04:13.327+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:04:13.328+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:04:13.338+02:00  WARN 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:04:13.374+02:00  INFO 17084 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:04:13.377+02:00  INFO 17084 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@22c4d2c4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:04:18.869+02:00  INFO 17084 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:04:18.871+02:00  INFO 17084 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:04:18.872+02:00  INFO 17084 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:04:36.406+02:00  INFO 17344 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 17344 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:04:36.406+02:00  INFO 17344 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:04:36.427+02:00  INFO 17344 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:04:36.619+02:00  INFO 17344 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:04:36.630+02:00  INFO 17344 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:04:36.803+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:04:36.824+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:04:36.838+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:04:36.934+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:04:36.944+02:00  INFO 17344 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:04:36.993+02:00  INFO 17344 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c18d880
+2024-04-10T16:04:36.993+02:00  INFO 17344 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:04:37.376+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:04:37.534+02:00  INFO 17344 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:04:37.609+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:04:37.629+02:00  INFO 17344 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.471 seconds (process running for 1.799)
+2024-04-10T16:04:44.368+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:04:44.369+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:04:44.398+02:00  WARN 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:04:44.398+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:04:44.398+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:04:44.398+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:04:44.398+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:04:44.399+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:04:44.408+02:00  WARN 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:04:44.445+02:00  INFO 17344 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:04:44.448+02:00  INFO 17344 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a29ef60] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:04:44.469+02:00  INFO 17344 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:04:44.477+02:00 ERROR 17344 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [private int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='skibidi', points=500, playedOn=Wed Apr 10 16:04:44 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52)
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570)
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135)
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293)
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55)
+	at java.base/java.lang.reflect.Field.get(Field.java:444)
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48)
+	... 37 common frames omitted
+
+2024-04-10T16:04:44.480+02:00  INFO 17344 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:04:44.482+02:00  INFO 17344 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:04:44.483+02:00  INFO 17344 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:06:03.669+02:00  INFO 17627 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 17627 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:06:03.669+02:00  INFO 17627 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:06:03.689+02:00  INFO 17627 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:06:03.884+02:00  INFO 17627 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:06:03.895+02:00  INFO 17627 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:06:04.076+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:06:04.098+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:06:04.112+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:06:04.209+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:06:04.220+02:00  INFO 17627 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:06:04.269+02:00  INFO 17627 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7eecce2e
+2024-04-10T16:06:04.270+02:00  INFO 17627 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:06:04.657+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:06:04.815+02:00  INFO 17627 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:06:04.897+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:06:04.913+02:00  INFO 17627 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.49 seconds (process running for 1.831)
+2024-04-10T16:06:09.032+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:06:09.033+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:06:09.063+02:00  WARN 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:06:09.063+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:06:09.063+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:06:09.064+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:06:09.064+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:06:09.065+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:06:09.074+02:00  WARN 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:06:09.112+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:06:09.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2690e8bd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:06:11.107+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:06:11.108+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:06:11.115+02:00  WARN 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:06:11.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:06:11.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:06:11.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:06:11.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:06:11.115+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:06:11.122+02:00  WARN 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:06:11.153+02:00  INFO 17627 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:06:11.155+02:00  INFO 17627 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@360d1ec1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:06:11.164+02:00  INFO 17627 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:06:11.172+02:00 ERROR 17627 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [private int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='s', points=500, playedOn=Wed Apr 10 16:06:11 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52)
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570)
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135)
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293)
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55)
+	at java.base/java.lang.reflect.Field.get(Field.java:444)
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48)
+	... 37 common frames omitted
+
+2024-04-10T16:06:11.175+02:00  INFO 17627 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:06:11.176+02:00  INFO 17627 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:06:11.177+02:00  INFO 17627 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:07:34.431+02:00  INFO 17930 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 17930 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:07:34.432+02:00  INFO 17930 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:07:34.454+02:00  INFO 17930 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:07:34.643+02:00  INFO 17930 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:07:34.653+02:00  INFO 17930 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:07:34.827+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:07:34.847+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:07:34.860+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:07:34.953+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:07:34.964+02:00  INFO 17930 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:07:35.012+02:00  INFO 17930 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a15bca1
+2024-04-10T16:07:35.013+02:00  INFO 17930 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:07:35.399+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:07:35.552+02:00  INFO 17930 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:07:35.622+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:07:35.638+02:00  INFO 17930 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.455 seconds (process running for 1.757)
+2024-04-10T16:07:39.059+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:07:39.060+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:07:39.089+02:00  WARN 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:07:39.089+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:07:39.089+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:07:39.089+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:07:39.089+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:07:39.090+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:07:39.100+02:00  WARN 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:07:39.136+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:07:39.139+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7daa42af] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:07:40.244+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:07:40.245+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:07:40.252+02:00  WARN 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:07:40.252+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:07:40.252+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:07:40.252+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:07:40.252+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:07:40.252+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:07:40.259+02:00  WARN 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:07:40.291+02:00  INFO 17930 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:07:40.292+02:00  INFO 17930 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73cccad0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:07:40.302+02:00  INFO 17930 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:07:40.310+02:00 ERROR 17930 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [private int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='1', points=500, playedOn=Wed Apr 10 16:07:40 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52)
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570)
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135)
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293)
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84)
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55)
+	at java.base/java.lang.reflect.Field.get(Field.java:444)
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48)
+	... 37 common frames omitted
+
+2024-04-10T16:07:40.313+02:00  INFO 17930 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:07:40.314+02:00  INFO 17930 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:07:40.315+02:00  INFO 17930 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:08:37.780+02:00  INFO 18352 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 18352 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:08:37.781+02:00  INFO 18352 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:08:37.804+02:00  INFO 18352 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:08:37.990+02:00  INFO 18352 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:08:38.000+02:00  INFO 18352 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:08:38.174+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:08:38.200+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:08:38.218+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:08:38.308+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:08:38.319+02:00  INFO 18352 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:08:38.367+02:00  INFO 18352 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@220030b7
+2024-04-10T16:08:38.367+02:00  INFO 18352 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:08:38.755+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:08:38.909+02:00  INFO 18352 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:08:38.989+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:08:39.005+02:00  INFO 18352 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.427 seconds (process running for 1.714)
+2024-04-10T16:08:43.936+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:08:43.937+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:08:43.969+02:00  WARN 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:08:43.969+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:08:43.969+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:08:43.969+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:08:43.969+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:08:43.970+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:08:43.980+02:00  WARN 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:08:44.016+02:00  INFO 18352 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:08:44.019+02:00  INFO 18352 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4657aa1a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:10:52.018+02:00  INFO 18352 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:10:52.019+02:00  INFO 18352 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:10:52.021+02:00  INFO 18352 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:10:53.268+02:00  INFO 19253 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 19253 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:10:53.270+02:00  INFO 19253 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:10:53.292+02:00  INFO 19253 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:10:53.497+02:00  INFO 19253 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:10:53.508+02:00  INFO 19253 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:10:53.689+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:10:53.710+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:10:53.726+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:10:53.823+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:10:53.839+02:00  INFO 19253 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:10:53.884+02:00  INFO 19253 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a4d0db1
+2024-04-10T16:10:53.885+02:00  INFO 19253 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:10:54.277+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:10:54.440+02:00  INFO 19253 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:10:54.520+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:10:54.537+02:00  INFO 19253 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.465 seconds (process running for 1.78)
+2024-04-10T16:10:58.828+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:10:58.829+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:10:58.860+02:00  WARN 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:10:58.861+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:10:58.861+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:10:58.861+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:10:58.861+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:10:58.862+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:10:58.872+02:00  WARN 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:10:58.909+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:10:58.912+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5fefb224] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:11:32.086+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:11:32.087+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:11:32.094+02:00  WARN 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:11:32.094+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:11:32.094+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:11:32.095+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:11:32.095+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:11:32.095+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:11:32.102+02:00  WARN 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:11:32.134+02:00  INFO 19253 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:11:32.135+02:00  INFO 19253 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2aedbd77] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:11:32.145+02:00  INFO 19253 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:11:32.154+02:00 ERROR 19253 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [private int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='1', points=500, playedOn=Wed Apr 10 16:11:32 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.4.jar:3.2.4]
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55) ~[na:na]
+	at java.base/java.lang.reflect.Field.get(Field.java:444) ~[na:na]
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	... 37 common frames omitted
+
+2024-04-10T16:11:32.158+02:00  INFO 19253 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:11:32.159+02:00  INFO 19253 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:11:32.160+02:00  INFO 19253 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:14:53.536+02:00  INFO 19714 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 19714 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:14:53.537+02:00  INFO 19714 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:14:53.557+02:00  INFO 19714 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:14:53.746+02:00  INFO 19714 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:14:53.758+02:00  INFO 19714 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:14:53.951+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:14:53.975+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:14:53.990+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:14:54.088+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:14:54.103+02:00  INFO 19714 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:14:54.144+02:00  INFO 19714 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fe4ff84
+2024-04-10T16:14:54.145+02:00  INFO 19714 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:14:54.550+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:14:54.711+02:00  INFO 19714 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:14:54.792+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:14:54.810+02:00  INFO 19714 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.462 seconds (process running for 1.778)
+2024-04-10T16:14:58.468+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:14:58.469+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:14:58.505+02:00  WARN 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:14:58.505+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:14:58.505+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:14:58.505+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:14:58.506+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:14:58.507+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:14:58.516+02:00  WARN 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:14:58.559+02:00  INFO 19714 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:14:58.562+02:00  INFO 19714 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@16a546b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:14:58.584+02:00  INFO 19714 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:14:58.592+02:00 ERROR 19714 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [public int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='1', points=500, playedOn=Wed Apr 10 16:14:58 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.4.jar:3.2.4]
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55) ~[na:na]
+	at java.base/java.lang.reflect.Field.get(Field.java:444) ~[na:na]
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	... 37 common frames omitted
+
+2024-04-10T16:14:58.597+02:00  INFO 19714 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:14:58.598+02:00  INFO 19714 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:14:58.599+02:00  INFO 19714 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:17:32.936+02:00  INFO 20153 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 20153 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:17:32.937+02:00  INFO 20153 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:17:32.958+02:00  INFO 20153 --- [gamestudio] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-10T16:17:33.155+02:00  INFO 20153 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:17:33.166+02:00  INFO 20153 --- [gamestudio] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:17:33.354+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:17:33.377+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:17:33.393+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:17:33.487+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:17:33.498+02:00  INFO 20153 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:17:33.540+02:00  INFO 20153 --- [gamestudio] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fe4ff84
+2024-04-10T16:17:33.541+02:00  INFO 20153 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:17:33.946+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:17:34.108+02:00  INFO 20153 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:17:34.191+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-10T16:17:34.208+02:00  INFO 20153 --- [gamestudio] [restartedMain] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.47 seconds (process running for 1.757)
+2024-04-10T16:17:40.072+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:17:40.073+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:17:40.110+02:00  WARN 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:17:40.110+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:17:40.110+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:17:40.111+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:17:40.111+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:17:40.112+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:17:40.121+02:00  WARN 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:17:40.157+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:17:40.160+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@244d73dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:18:00.891+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:18:00.892+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:18:00.899+02:00  WARN 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:18:00.899+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:18:00.899+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:18:00.899+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:18:00.899+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:18:00.899+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:18:00.907+02:00  WARN 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:18:00.942+02:00  INFO 20153 --- [gamestudio] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:18:00.944+02:00  INFO 20153 --- [gamestudio] [restartedMain] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@49b4dae5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:18:00.955+02:00  INFO 20153 --- [gamestudio] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:18:00.963+02:00 ERROR 20153 --- [gamestudio] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.property.access.spi.PropertyAccessException: Error accessing field [private int sk.tuke.kpi.kp.gamestudio.entity.Score.ident] by reflection for persistent property [sk.tuke.kpi.kp.gamestudio.entity.Score#ident] : Score{game='Slide a Lama', player='1', points=500, playedOn=Wed Apr 10 16:18:00 CEST 2024}
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:52) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.getIdentifier(BasicEntityIdentifierMappingImpl.java:158) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.getIdentifier(AbstractEntityPersister.java:4570) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.isTransient(AbstractEntityPersister.java:4135) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:293) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.EntityState.getEntityState(EntityState.java:62) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityState(DefaultPersistEventListener.java:112) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:85) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.4.jar:3.2.4]
+Caused by: java.lang.IllegalArgumentException: Can not get int field sk.tuke.kpi.kp.gamestudio.entity.Score.ident on sk.tuke.kpi.kp.gamestudio.entity.Score
+	at java.base/jdk.internal.reflect.MethodHandleFieldAccessorImpl.newGetIllegalArgumentException(MethodHandleFieldAccessorImpl.java:86) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.getInt(MethodHandleIntegerFieldAccessorImpl.java:84) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleIntegerFieldAccessorImpl.get(MethodHandleIntegerFieldAccessorImpl.java:55) ~[na:na]
+	at java.base/java.lang.reflect.Field.get(Field.java:444) ~[na:na]
+	at org.hibernate.property.access.spi.GetterFieldImpl.get(GetterFieldImpl.java:48) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	... 37 common frames omitted
+
+2024-04-10T16:18:00.968+02:00  INFO 20153 --- [gamestudio] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:18:00.970+02:00  INFO 20153 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:18:00.971+02:00  INFO 20153 --- [gamestudio] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:27:36.514+02:00  INFO 22288 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 22288 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:27:36.515+02:00  INFO 22288 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:27:36.726+02:00  INFO 22288 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:27:36.741+02:00  INFO 22288 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:27:36.915+02:00  INFO 22288 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:27:36.939+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:27:36.955+02:00  INFO 22288 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:27:37.057+02:00  INFO 22288 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:27:37.068+02:00  INFO 22288 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:27:37.127+02:00  INFO 22288 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41ef1ea2
+2024-04-10T16:27:37.128+02:00  INFO 22288 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:27:37.525+02:00  INFO 22288 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:27:37.690+02:00  INFO 22288 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:27:37.773+02:00  INFO 22288 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.454 seconds (process running for 1.737)
+2024-04-10T16:27:42.645+02:00  INFO 22288 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:27:42.646+02:00  INFO 22288 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:27:42.674+02:00  WARN 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:27:42.674+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:27:42.675+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:27:42.675+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:27:42.675+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:27:42.676+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:27:42.685+02:00  WARN 22288 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:27:42.723+02:00  INFO 22288 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:27:42.726+02:00  INFO 22288 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@439d649c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:27:42.753+02:00  INFO 22288 --- [gamestudio] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:27:42.761+02:00 ERROR 22288 --- [gamestudio] [main] o.s.boot.SpringApplication               : Application run failed
+
+jakarta.persistence.TransactionRequiredException: no transaction is in progress
+	at org.hibernate.internal.AbstractSharedSessionContract.checkTransactionNeededForUpdateOperation(AbstractSharedSessionContract.java:517) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.checkTransactionNeededForUpdateOperation(SessionImpl.java:2522) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1394) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1389) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:23) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+
+2024-04-10T16:27:42.765+02:00  INFO 22288 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:27:42.765+02:00  INFO 22288 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:27:42.766+02:00  INFO 22288 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:31:06.477+02:00  INFO 22713 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 22713 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:31:06.479+02:00  INFO 22713 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:31:06.691+02:00  INFO 22713 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:31:06.704+02:00  INFO 22713 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:31:06.892+02:00  INFO 22713 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:31:06.916+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:31:06.930+02:00  INFO 22713 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:31:07.035+02:00  INFO 22713 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:31:07.046+02:00  INFO 22713 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:31:07.105+02:00  INFO 22713 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4dad0eed
+2024-04-10T16:31:07.106+02:00  INFO 22713 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:31:07.511+02:00  INFO 22713 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:31:07.685+02:00  INFO 22713 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:31:07.771+02:00  INFO 22713 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.505 seconds (process running for 1.815)
+2024-04-10T16:31:11.170+02:00  INFO 22713 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:31:11.171+02:00  INFO 22713 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:31:11.201+02:00  WARN 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:31:11.202+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:31:11.202+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:31:11.202+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:31:11.202+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:31:11.203+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:31:11.213+02:00  WARN 22713 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:31:11.255+02:00  INFO 22713 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:31:11.258+02:00  INFO 22713 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48d14ea0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:31:11.284+02:00  INFO 22713 --- [gamestudio] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:31:11.292+02:00 ERROR 22713 --- [gamestudio] [main] o.s.boot.SpringApplication               : Application run failed
+
+jakarta.persistence.TransactionRequiredException: no transaction is in progress
+	at org.hibernate.internal.AbstractSharedSessionContract.checkTransactionNeededForUpdateOperation(AbstractSharedSessionContract.java:517) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.checkTransactionNeededForUpdateOperation(SessionImpl.java:2522) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1394) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1389) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:22) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+
+2024-04-10T16:31:11.296+02:00  INFO 22713 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:31:11.296+02:00  INFO 22713 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:31:11.297+02:00  INFO 22713 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:32:12.147+02:00  INFO 22874 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 22874 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:32:12.148+02:00  INFO 22874 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:32:12.358+02:00  INFO 22874 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:32:12.369+02:00  INFO 22874 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:32:12.538+02:00  INFO 22874 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:32:12.559+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:32:12.575+02:00  INFO 22874 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:32:12.670+02:00  INFO 22874 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:32:12.686+02:00  INFO 22874 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:32:12.742+02:00  INFO 22874 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@460b50df
+2024-04-10T16:32:12.743+02:00  INFO 22874 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:32:13.143+02:00  INFO 22874 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:32:13.314+02:00  INFO 22874 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:32:13.398+02:00  INFO 22874 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.46 seconds (process running for 1.74)
+2024-04-10T16:32:19.961+02:00  INFO 22874 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:32:19.962+02:00  INFO 22874 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:32:20.003+02:00  WARN 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:32:20.003+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:32:20.003+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:32:20.003+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:32:20.003+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:32:20.004+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:32:20.014+02:00  WARN 22874 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:32:20.052+02:00  INFO 22874 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:32:20.056+02:00  INFO 22874 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@55a2f08b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:32:20.073+02:00  WARN 22874 --- [gamestudio] [main] org.hibernate.internal.SessionImpl       : HHH000027: Calling joinTransaction() on a non JTA EntityManager
+2024-04-10T16:32:20.082+02:00  INFO 22874 --- [gamestudio] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:32:20.089+02:00 ERROR 22874 --- [gamestudio] [main] o.s.boot.SpringApplication               : Application run failed
+
+jakarta.persistence.TransactionRequiredException: no transaction is in progress
+	at org.hibernate.internal.AbstractSharedSessionContract.checkTransactionNeededForUpdateOperation(AbstractSharedSessionContract.java:517) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.checkTransactionNeededForUpdateOperation(SessionImpl.java:2522) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1394) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1389) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at sk.tuke.kpi.kp.gamestudio.service.impl.ScoreServiceJPA.addScore(ScoreServiceJPA.java:23) ~[classes/:na]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.lambda$runner$0(GamestudioApplication.java:75) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:790) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:83) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:88) ~[spring-core-6.1.5.jar:6.1.5]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:774) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at sk.tuke.kpi.kp.gamestudio.SpringService.main(GamestudioApplication.java:28) ~[classes/:na]
+
+2024-04-10T16:32:20.093+02:00  INFO 22874 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:32:20.094+02:00  INFO 22874 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:32:20.095+02:00  INFO 22874 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:32:45.134+02:00  INFO 23018 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 23018 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:32:45.135+02:00  INFO 23018 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:32:45.344+02:00  INFO 23018 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:32:45.357+02:00  INFO 23018 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:32:45.535+02:00  INFO 23018 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:32:45.559+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:32:45.575+02:00  INFO 23018 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:32:45.677+02:00  INFO 23018 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:32:45.688+02:00  INFO 23018 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:32:45.747+02:00  INFO 23018 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4dad0eed
+2024-04-10T16:32:45.748+02:00  INFO 23018 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:32:46.152+02:00  INFO 23018 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:32:46.322+02:00  INFO 23018 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:32:46.408+02:00  INFO 23018 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.473 seconds (process running for 1.728)
+2024-04-10T16:32:48.977+02:00  INFO 23018 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:32:48.978+02:00  INFO 23018 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:32:49.007+02:00  WARN 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:32:49.007+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:32:49.007+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:32:49.007+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:32:49.007+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:32:49.008+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:32:49.017+02:00  WARN 23018 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:32:49.063+02:00  INFO 23018 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:32:49.065+02:00  INFO 23018 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48d14ea0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:32:53.544+02:00  INFO 23018 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:32:53.545+02:00  INFO 23018 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:32:53.546+02:00  INFO 23018 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:33:22.335+02:00  INFO 23155 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 23155 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:33:22.336+02:00  INFO 23155 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:33:22.546+02:00  INFO 23155 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:33:22.557+02:00  INFO 23155 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:33:22.746+02:00  INFO 23155 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:33:22.770+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:33:22.785+02:00  INFO 23155 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:33:22.883+02:00  INFO 23155 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:33:22.895+02:00  INFO 23155 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:33:22.941+02:00  INFO 23155 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50b0afd7
+2024-04-10T16:33:22.941+02:00  INFO 23155 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:33:23.360+02:00  INFO 23155 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:33:23.525+02:00  INFO 23155 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:33:23.611+02:00  INFO 23155 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.524 seconds (process running for 1.8)
+2024-04-10T16:33:27.035+02:00  INFO 23155 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:33:27.036+02:00  INFO 23155 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:33:27.065+02:00  WARN 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:33:27.066+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:33:27.066+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:33:27.066+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:33:27.066+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:33:27.067+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:33:27.076+02:00  WARN 23155 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:33:27.114+02:00  INFO 23155 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:33:27.117+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@677274e7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:33:42.233+02:00  INFO 23155 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:33:42.234+02:00  INFO 23155 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:33:42.242+02:00  WARN 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:33:42.242+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:33:42.242+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:33:42.242+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:33:42.242+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:33:42.242+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:33:42.250+02:00  WARN 23155 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:33:42.288+02:00  INFO 23155 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:33:42.290+02:00  INFO 23155 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@280f061e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:33:47.080+02:00  INFO 23155 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:33:47.081+02:00  INFO 23155 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:33:47.082+02:00  INFO 23155 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:35:11.953+02:00  INFO 24001 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 24001 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:35:11.955+02:00  INFO 24001 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:35:12.174+02:00  INFO 24001 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:35:12.186+02:00  INFO 24001 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:35:12.369+02:00  INFO 24001 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:35:12.391+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:35:12.405+02:00  INFO 24001 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:35:12.518+02:00  INFO 24001 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:35:12.529+02:00  INFO 24001 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:35:12.587+02:00  INFO 24001 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@79d3473e
+2024-04-10T16:35:12.587+02:00  INFO 24001 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:35:12.999+02:00  INFO 24001 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:35:13.177+02:00  INFO 24001 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:35:13.264+02:00  INFO 24001 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.519 seconds (process running for 1.827)
+2024-04-10T16:35:20.252+02:00  INFO 24001 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:35:20.253+02:00  INFO 24001 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:35:20.288+02:00  WARN 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:35:20.288+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:35:20.288+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:35:20.288+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:35:20.288+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:35:20.289+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:35:20.297+02:00  WARN 24001 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:35:20.330+02:00  INFO 24001 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:35:20.332+02:00  INFO 24001 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3f919230] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:35:23.518+02:00  INFO 24001 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:35:23.519+02:00  INFO 24001 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:35:23.520+02:00  INFO 24001 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:36:12.302+02:00  INFO 24229 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 24229 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:36:12.303+02:00  INFO 24229 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:36:12.517+02:00  INFO 24229 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:36:12.530+02:00  INFO 24229 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:36:12.709+02:00  INFO 24229 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T16:36:12.731+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T16:36:12.746+02:00  INFO 24229 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:36:12.844+02:00  INFO 24229 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T16:36:12.856+02:00  INFO 24229 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T16:36:12.915+02:00  INFO 24229 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@460b50df
+2024-04-10T16:36:12.916+02:00  INFO 24229 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T16:36:13.318+02:00  INFO 24229 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:36:13.491+02:00  INFO 24229 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:36:13.575+02:00  INFO 24229 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Started GamestudioApplication in 1.498 seconds (process running for 1.752)
+2024-04-10T16:36:18.280+02:00  INFO 24229 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T16:36:18.281+02:00  INFO 24229 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T16:36:18.318+02:00  WARN 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T16:36:18.318+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T16:36:18.318+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T16:36:18.319+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T16:36:18.319+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T16:36:18.320+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T16:36:18.329+02:00  WARN 24229 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T16:36:18.368+02:00  INFO 24229 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T16:36:18.372+02:00  INFO 24229 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6e475994] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T16:36:20.547+02:00  INFO 24229 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T16:36:20.548+02:00  INFO 24229 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T16:36:20.549+02:00  INFO 24229 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-10T16:37:00.414+02:00  INFO 24377 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : Starting GamestudioApplication using Java 21.0.2 with PID 24377 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/classes started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T16:37:00.415+02:00  INFO 24377 --- [gamestudio] [main] s.t.k.k.g.GamestudioApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T16:37:00.635+02:00  INFO 24377 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T16:37:00.647+02:00  INFO 24377 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-04-10T16:37:00.762+02:00  WARN 24377 --- [gamestudio] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2024-04-10T16:37:00.766+02:00  INFO 24377 --- [gamestudio] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-10T16:37:00.775+02:00 ERROR 24377 --- [gamestudio] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2024-04-10T22:00:36.550+02:00  INFO 31717 --- [gamestudio] [main] s.tuke.kpi.kp.gamestudio.SpringService   : Starting SpringService v0.0.1-SNAPSHOT using Java 17.0.9 with PID 31717 (/home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio/target/gamestudio-0.0.1-SNAPSHOT.jar started by kao in /home/kao/Documents/university/KP/game/gamestudio-7550/game_2/gamestudio)
+2024-04-10T22:00:36.556+02:00  INFO 31717 --- [gamestudio] [main] s.tuke.kpi.kp.gamestudio.SpringService   : No active profile set, falling back to 1 default profile: "default"
+2024-04-10T22:00:37.590+02:00  INFO 31717 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-10T22:00:37.628+02:00  INFO 31717 --- [gamestudio] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2024-04-10T22:00:38.275+02:00  INFO 31717 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-10T22:00:38.392+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-10T22:00:38.456+02:00  INFO 31717 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T22:00:38.850+02:00  INFO 31717 --- [gamestudio] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-10T22:00:38.894+02:00  INFO 31717 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-10T22:00:39.064+02:00  INFO 31717 --- [gamestudio] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57efc6fd
+2024-04-10T22:00:39.067+02:00  INFO 31717 --- [gamestudio] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-10T22:00:39.630+02:00  INFO 31717 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T22:00:39.638+02:00  INFO 31717 --- [gamestudio] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T22:00:39.740+02:00  INFO 31717 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T22:00:39.745+02:00  INFO 31717 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T22:00:40.011+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T22:00:40.012+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T22:00:40.013+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T22:00:40.013+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T22:00:40.013+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T22:00:40.017+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T22:00:40.045+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T22:00:40.906+02:00  INFO 31717 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T22:00:41.389+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@61a17f3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T22:00:41.478+02:00  INFO 31717 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T22:00:41.486+02:00  INFO 31717 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T22:00:41.614+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T22:00:41.614+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T22:00:41.615+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T22:00:41.615+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T22:00:41.615+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T22:00:41.615+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T22:00:41.636+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T22:00:41.735+02:00  INFO 31717 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T22:00:41.741+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5c815478] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T22:00:41.765+02:00  INFO 31717 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T22:00:41.770+02:00  INFO 31717 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T22:00:41.884+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T22:00:41.885+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T22:00:41.885+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T22:00:41.885+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T22:00:41.886+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T22:00:41.886+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T22:00:41.906+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T22:00:42.023+02:00  INFO 31717 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T22:00:42.030+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71f9f8ba] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T22:00:42.059+02:00  INFO 31717 --- [gamestudio] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: gamestudio]
+2024-04-10T22:00:42.067+02:00  INFO 31717 --- [gamestudio] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-10T22:00:42.198+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2024-04-10T22:00:42.199+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+2024-04-10T22:00:42.199+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost/gamestudio]
+2024-04-10T22:00:42.199+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2024-04-10T22:00:42.199+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2024-04-10T22:00:42.199+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.pooling    : HHH10001115: Connection pool size: 20 (min=1)
+2024-04-10T22:00:42.218+02:00  WARN 31717 --- [gamestudio] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-10T22:00:42.337+02:00  INFO 31717 --- [gamestudio] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-10T22:00:42.346+02:00  INFO 31717 --- [gamestudio] [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59e6fb8a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-04-10T22:00:42.799+02:00  INFO 31717 --- [gamestudio] [main] s.tuke.kpi.kp.gamestudio.SpringService   : Started SpringService in 7.116 seconds (process running for 7.854)
+2024-04-10T22:01:36.083+02:00  INFO 31717 --- [gamestudio] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-10T22:01:36.087+02:00  INFO 31717 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-10T22:01:36.090+02:00  INFO 31717 --- [gamestudio] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
