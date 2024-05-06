@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/score")
+@CrossOrigin
 public class ScoreServiceRest {
 
     private final ScoreService scoreService = new ScoreServiceJPA();

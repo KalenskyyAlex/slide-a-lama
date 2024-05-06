@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/comment")
+@CrossOrigin
 public class CommentServiceRest {
 
     private final CommentService commentService = new CommentServiceJPA();

@@ -85,6 +85,16 @@
 
 .grid-container {
   display: grid;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-item {
+  display: block;
+  padding: 25px;
 }
 
 .disabled {

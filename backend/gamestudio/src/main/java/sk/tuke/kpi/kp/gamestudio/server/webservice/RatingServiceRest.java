@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/rating")
+@CrossOrigin
 public class RatingServiceRest {
 
     private final RatingService ratingService = new RatingServiceJPA();

@@ -49,6 +49,7 @@ function Login() {
             if (response.ok) {
                 const user = await response.json();
                 if (user.password === password) {
+                    localStorage.setItem("nickname1", user.username);
                     activate();
                     return;
                 }
@@ -80,6 +81,7 @@ function Login() {
 
                     if (postResponse.ok) {
                         alert("New user created");
+                        localStorage.setItem("nickname1", user.username);
                         activate();
                         return;
                     }
@@ -97,6 +99,7 @@ function Login() {
             if (response.ok) {
                 const user = await response.json();
                 if (user.password === password) {
+                    localStorage.setItem("nickname2", user.username);
                     navigate('/game');
                     return;
                 }
@@ -128,6 +131,7 @@ function Login() {
 
                     if (postResponse.ok) {
                         alert("New user created");
+                        localStorage.setItem("nickname1", user.username);
                         navigate('/game');
                         return;
                     }
@@ -139,11 +143,9 @@ function Login() {
     }
 
     const start_comp = () => {
-        const [ok, username, password] = read_credentials(p2UsernameRef, p2PasswordRef)
-        if (ok) {
-            // TODO create coop mode
-            navigate('/game');
-        }
+        // TODO create coop mode
+        localStorage.setItem("nickname2", "Computer");
+        navigate('/game');
     }
 
     return (

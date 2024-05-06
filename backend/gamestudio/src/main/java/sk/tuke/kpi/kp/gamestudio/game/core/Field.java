@@ -134,6 +134,10 @@ public class Field {
         return cursor;
     }
 
+    public void setCursor(Cursor cursor) {
+        this.cursor = cursor;
+    }
+
     public void update(MatchResult m) {
         if (m == null) return;
 
