@@ -1,102 +1,277 @@
-.App {
-  text-align: center;
-}
-
-/**{*/
-/*  overflow: hidden;*/
-/*}*/
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  background-image: url("../public/visual/back.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  overflow: hidden;
 }
 
 .header {
   display: block;
   position: relative;
-  padding: 60px;
+  height: 20vh;
+  padding: 10px;
   text-align: center;
   font-size: 30px;
 }
 
-
-.left {
-  background: #fff113;
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
-.centered {
+.login-container{
   display: block;
   position: relative;
-  left: 50%;
-  padding: 20%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  height: 80vh;
+  padding: 0;
+}
+
+.grid-container-2{
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr;
+}
+
+
+.right {
+  display: block;
+}
+
+.left {
+  display: block;
+}
+
+.login-form {
+  display: block;
+  position: relative;
+}
+
+.panel-mini{
+  background-image: url("../public/visual/panel_mini.png");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 5%;
+  width: 80%;
+  max-width: 200px;
+  min-width: 0;
+  margin: auto;
+}
+
+.login-form-panel{
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  top: -8vh;
+  max-width: 300px;
+  margin: auto;
+  background-image: url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .split {
+  position: relative;
   display: inline-block;
   height: 100%;
   width: 50%;
-  position: relative;
   z-index: 1;
   top: 0;
-  overflow-x: hidden;
-  padding-top: 30%;
+  overflow: hidden;
+  padding-top: 0;
 }
 
 .login-form > *{
   display: block;
+  position: relative;
 }
 
 .grid-container {
+  position: relative;
   display: grid;
-  width: 60%;
   height: auto;
+  width: 40%;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  top: 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-container-3 {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 4fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.grid-container-4 {
+  position: relative;
+  display: grid;
+  height: 40%;
+  width: 30%;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .grid-item {
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
   display: block;
-  padding: 25px;
 }
 
 .disabled {
   pointer-events: none;
+}
+
+.RED{
+  background-image: url("../public/visual/red.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.BLUE{
+  background-image: url("../public/visual/blue.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.GREEN{
+  background-image: url("../public/visual/green.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.WHITE{
+  background-image: url("../public/visual/white.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.CYAN{
+  background-image: url("../public/visual/cyan.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.PURPLE{
+  background-image: url("../public/visual/purple.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.YELLOW{
+  background-image: url("../public/visual/yellow.png"), url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%, 100% 100%;
+  background-position: center center;
+}
+
+.insert-left{
+  background-image: url("../public/visual/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center center;
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+
+.insert-right{
+  background-image: url("../public/visual/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center center;
+  overflow: hidden;
+  transform: rotate(-90deg);
+}
+
+.insert-up{
+  background-image: url("../public/visual/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center center;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.logo{
+  width: auto;
+  height: 100%;
+}
+
+label{
+  margin-top: 5%;
+  position: relative;
+  margin-left: 10%;
+  display: block;
+}
+
+input{
+  position: relative;
+  margin-left: 10%;
+  display: block;
+}
+
+.insert-button{
+  opacity: 0.3;
+}
+
+.insert-button:hover{
+  opacity: 1;
+}
+
+button{
+  display: inline-block;
+  position: relative;
+  margin-right: 2%;
+  margin-left: 2%;
+  left: 13%;
+  background-image: url("../public/visual/panel_mini.png");
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  border: none;
+  padding: 10%;
+  max-width: 40%;
+}
+
+button:focus{
+  outline: none;
+}
+
+input:focus{
+  outline: none
+}
+
+input {
+  background-image: url("../public/visual/panel_mini.png");
+  background-color: transparent;
+  background-size: 100% 100%;
+  padding: 10px;
+  text-indent: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
 }

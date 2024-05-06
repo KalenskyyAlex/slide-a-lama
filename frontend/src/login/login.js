@@ -151,79 +151,78 @@ function Login() {
     return (
         <div className="Login">
             <div className="header">
-                <h1> Welcome To Slide A Lama </h1>
+                <img className="logo" alt="Slide a Lama" src="/visual/logo.png"/>
             </div>
-            <div>
-                <div className="split left">
-                    <div className="centered login-form">
-                        <div className="header">
-                            Player 1
+            <div className="grid-container-2">
+                <div className="left">
+                    <div className="login-form">
+                        <div className="header" style={{padding: 0}}>
+                            <div className="panel-mini">Player 1</div>
                         </div>
-                        <label>
-                            Username:
-                        </label>
-                        <input type="text"
-                               id="first"
-                               ref={p1UsernameRef}
-                               name="first"
-                               placeholder="Enter your Username" required/>
-                        <label>
-                            Password:
-                        </label>
-                        <input type="password"
-                               id="password"
-                               ref={p1PasswordRef}
-                               name="password"
-                               placeholder="Enter your Password" required/>
-                        <button onClick={activate_login} style={{display: "inline"}}>
-                            login
-                        </button>
-                        <button onClick={activate_signup} style={{display: "inline"}}>
-                            sign up
-                        </button>
-                        <div className="header">
+                        <div className="login-form-panel">
                             <br/>
+                            <label>Username:</label>
+                            <input type="text"
+                                   id="first"
+                                   ref={p1UsernameRef}
+                                   name="first"
+                                   placeholder="Enter your Username" required/>
+                            <label>Password:</label>
+                            <input type="password"
+                                   id="password"
+                                   ref={p1PasswordRef}
+                                   name="password"
+                                   placeholder="Enter your Password" required/>
+                            <button onClick={activate_login} style={{display: "inline"}}>
+                                login
+                            </button>
+                            <button onClick={activate_signup} style={{display: "inline"}}>
+                                sign up
+                            </button>
+                            <div className="header">
+                                <br/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="split right">
-                    <div className="centered login-form">
-                        <div className="header">
-                            Player 2
+                <div className="right">
+                    <div className="login-form">
+                        <div className="header" style={{padding: 0}}>
+                            <div className="panel-mini">Player 2</div>
                         </div>
-                        <label>
-                            Username:
-                        </label>
-                        <input className="disabled"
-                               type="text"
-                               id="first"
-                               ref={p2UsernameRef}
-                               name="first"
-                               placeholder="Enter your Username" required/>
-                        <label>
-                            Password:
-                        </label>
-                        <input className="disabled"
-                               type="password"
-                               id="password"
-                               ref={p2PasswordRef}
-                               name="password"
-                               placeholder="Enter your Password" required/>
-                        <button disabled={enableP2LogIn} ref={p2LogInRef} onClick={start_login}
-                                style={{display: "inline"}}>
-                            login
-                        </button>
-                        <button disabled={enableP2SignIn} ref={p2SignInRef} onClick={start_signup}
-                                style={{display: "inline"}}>
-                            sign up
-                        </button>
-                        <div className="header">
-                            or
+                        <div className="login-form-panel">
+                            <br/>
+                            <label>
+                                Username:
+                            </label>
+                            <input className="disabled"
+                                   type="text"
+                                   id="first"
+                                   ref={p2UsernameRef}
+                                   name="first"
+                                   placeholder="Enter your Username" required/>
+                            <label>
+                                Password:
+                            </label>
+                            <input className="disabled"
+                                   type="password"
+                                   id="password"
+                                   ref={p2PasswordRef}
+                                   name="password"
+                                   placeholder="Enter your Password" required/>
+                            <button disabled={enableP2LogIn} ref={p2LogInRef} onClick={start_login}
+                                    style={{display: "inline"}}>
+                                login
+                            </button>
+                            <button disabled={enableP2SignIn} ref={p2SignInRef} onClick={start_signup}
+                                    style={{display: "inline"}}>
+                                sign up
+                            </button>
+                            <button disabled={enableP2Comp} ref={p2CompRef} onClick={start_comp}
+                                    style={{display: "inline", top: "-40px", marginLeft: "50px"}}>
+                                Play with Computer
+                            </button>
                         </div>
-                        <button disabled={enableP2Comp} ref={p2CompRef} onClick={start_comp}
-                                style={{display: "inline"}}>
-                            Play with Computer
-                        </button>
                     </div>
                 </div>
             </div>
