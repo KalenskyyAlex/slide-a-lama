@@ -226,6 +226,10 @@ function Login() {
                     </div>
                 </div>
             </div>
+            <div className="footer">
+                <button onClick={() => navigate("/feedback")}>FEEDBACK</button>
+                <button>SCORES</button>
+            </div>
         </div>
     );
 }

@@ -1,10 +1,12 @@
 import '../main.css';
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const backend_endpoint = "http://localhost:8080/api";
 
 function Game() {
     const [state, nextState] = useState(0);
+    const navigate = useNavigate();
 
     const init = async () => {
         const credentials = {
@@ -55,7 +57,11 @@ function Game() {
             }
         )
 
-        return JSON.parse(localStorage.getItem("field")).tiles[row][col];
+        try {
+            return JSON.parse(localStorage.getItem("field")).tiles[row][col];
+        }
+        catch {
+        }
     }
 
     const getFront = async (id) => {
@@ -74,7 +80,11 @@ function Game() {
             }
         )
 
-        return JSON.parse(localStorage.getItem("front"));
+        try{
+            return JSON.parse(localStorage.getItem("front"));
+        }
+        catch {
+        }
     }
 
     let tiles = [];
@@ -107,6 +117,7 @@ function Game() {
         });
 
         if (response.ok) {
+            tryGetField(tryInit(), 0, 0);
             nextState(state + 1);
         }
 
@@ -138,10 +149,15 @@ function Game() {
                 <div className="grid-container">
                     {
                         tiles.map((tile, index) => {
-                                if (tile.includes("insert")) {
-                                    return <div className={"grid-item insert-button " + tile} onClick={async () => await insert(mapping[index][0], mapping[index][1])}/>
+                                try {
+                                    if (tile.includes("insert")) {
+                                        return <div className={"grid-item insert-button " + tile}
+                                                    onClick={async () => await insert(mapping[index][0], mapping[index][1])}/>
+                                    }
+                                    return <div className={"grid-item " + tile}/>
+                                } catch {
+                                    window.location.reload()
                                 }
-                                return <div className={"grid-item " + tile}/>
                             }
                         )
                     }
@@ -149,11 +165,19 @@ function Game() {
                 <div className="grid-container-4">
                     {
                         front.map((tile) => {
-                                return <div className={"grid-item " + tile}/>
+                                try {
+                                    return <div className={"grid-item " + tile}/>
+                                } catch {
+                                    window.location.reload()
+                                }
                             }
                         )
                     }
                 </div>
+            </div>
+            <div style={{position: "absolute", bottom: "10%"}} className="footer">
+                <button onClick={() => navigate("/feedback")}>FEEDBACK</button>
+                <button>SCORES</button>
             </div>
         </div>
     );

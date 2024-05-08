@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import Game from "../game/game";
 import Login from "../login/login";
+import Feedback from "../feedback/feedback";
 
 const router = createBrowserRouter(
     [
@@ -14,6 +15,10 @@ const router = createBrowserRouter(
         {
             path: "/game",
             element: <Game/>
+        },
+        {
+            path: "/feedback",
+            element: <Feedback/>
         }
     ]
 )

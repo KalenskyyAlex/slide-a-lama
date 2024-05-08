@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "Jambu Kristal";
+  src: url("../public/fonts/jambu-kristal-font/JambuKristal-1G01M.otf") format('opentype');
+}
+
 body{
   background-image: url("../public/visual/back.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   overflow: hidden;
+
+  font-family: "Jambu Kristal", Calibri, Tahoma, sans-serif;
 }
 
 .header {
@@ -32,6 +39,63 @@ body{
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-rows: 1fr;
+}
+
+.footer{
+  position: relative;
+  display: block;
+  bottom: 0;
+  height: 5vh;
+  left: 80%;
+  width: 20%;
+}
+
+.footer > button{
+  display: inline-block;
+  height: 5vh;
+  max-height: 5vh;
+  padding: 1vh;
+  width: 10vh;
+  margin: auto 0 auto auto;
+}
+
+.grid-container-3to1-h{
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1.5fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr;
+}
+
+.grid-container-1to2to1-v {
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 10%;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.grid-container-1to1-v {
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 20%;
+  grid-template-rows: 1fr 1fr;
 }
 
 
@@ -70,6 +134,18 @@ body{
   max-width: 300px;
   margin: auto;
   background-image: url("../public/visual/panel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.form-panel-big{
+  padding: 2%;
+  display: block;
+  position: relative;
+  width: 80vh;
+  top: -8vh;
+  margin: auto;
+  background-image: url("../public/visual/panel_big.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -131,7 +207,12 @@ body{
   height: 0;
   width: 100%;
   padding-bottom: 100%;
-  display: block;
+}
+
+.grid-item-alt {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .disabled {
@@ -227,6 +308,7 @@ label{
 }
 
 input{
+  font-family: "Jambu Kristal", Calibri, Tahoma, sans-serif;
   position: relative;
   margin-left: 10%;
   display: block;
@@ -255,18 +337,19 @@ button{
   border: none;
   padding: 10%;
   max-width: 40%;
+  font-family: "Jambu Kristal", Calibri, Tahoma, sans-serif;
 }
 
 button:focus{
   outline: none;
 }
 
-input:focus{
+input, textarea:focus{
   outline: none
 }
 
-input {
-  background-image: url("../public/visual/panel_mini.png");
+input, textarea {
+  background-image: url("../public/visual/panel.png");
   background-color: transparent;
   background-size: 100% 100%;
   padding: 10px;
@@ -274,4 +357,27 @@ input {
   background-repeat: no-repeat;
   background-position: center center;
   border: none;
+}
+
+textarea {
+  background-image: url("../public/visual/panel_big.png");
+}
+
+textarea{
+  font-family: "Jambu Kristal", Calibri, Tahoma, sans-serif;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
