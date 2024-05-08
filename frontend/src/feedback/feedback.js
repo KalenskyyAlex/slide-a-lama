@@ -58,9 +58,26 @@ function Feedback() {
                 body: JSON.stringify(newComment)
             });
 
-        if(response.ok){
+        const newRating = {
+            game: "Slide a Lama",
+            rating: rating_int,
+            player: nickname.current.value,
+            ratedOn: new Date().toISOString().slice(0, 19)
+        }
+
+
+        const response2 = await fetch(backend_endpoint + "/rating",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newRating)
+            });
+
+        if(response.ok && response2.ok){
             const root = ReactDOM.createRoot(document.getElementById('root'));
-            root.render(<Alert message="Comment uploaded successfully"/>);
+            root.render(<Alert message="Feedback uploaded successfully"/>);
         }
     }
 

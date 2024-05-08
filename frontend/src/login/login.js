@@ -238,7 +238,7 @@ function Login() {
             </div>
             <div className="footer">
                 <button onClick={() => navigate("/feedback")}>FEEDBACK</button>
-                <button>SCORES</button>
+                <button onClick={() => navigate("/scores")}>SCORES</button>
             </div>
         </div>
     );

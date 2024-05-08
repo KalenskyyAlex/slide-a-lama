@@ -177,7 +177,7 @@ function Game() {
             </div>
             <div style={{position: "absolute", bottom: "10%"}} className="footer">
                 <button onClick={() => navigate("/feedback")}>FEEDBACK</button>
-                <button>SCORES</button>
+                <button onClick={() => navigate("/scores")}>SCORES</button>
             </div>
         </div>
     );
