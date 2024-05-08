@@ -3,6 +3,11 @@
   src: url("../public/fonts/jambu-kristal-font/JambuKristal-1G01M.otf") format('opentype');
 }
 
+iframe
+{
+  display: none;
+}
+
 body{
   background-image: url("../public/visual/back.jpg");
   background-repeat: no-repeat;
@@ -72,6 +77,20 @@ body{
   grid-template-rows: 1fr;
 }
 
+.grid-container-2x2{
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-rows: 1fr 1fr;
+}
+
+
 .grid-container-1to2to1-v {
   display: grid;
   position: relative;
@@ -81,8 +100,8 @@ body{
   margin: auto;
   grid-template-columns: 1fr;
   grid-column-gap: 0;
-  grid-row-gap: 10%;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-row-gap: 5%;
+  grid-template-rows: 0.5fr 1fr 1fr;
 }
 
 .grid-container-1to1-v {
@@ -147,7 +166,7 @@ body{
   margin: auto;
   background-image: url("../public/visual/panel_big.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
 
 .split {
@@ -364,6 +383,9 @@ textarea {
 }
 
 textarea{
+  padding: 5%;
+  width: 90% !important;
+  height: 90% !important;
   font-family: "Jambu Kristal", Calibri, Tahoma, sans-serif;
   resize: none;
   border: none;

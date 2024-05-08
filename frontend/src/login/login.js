@@ -1,6 +1,8 @@
 import '../main.css';
 import {useNavigate} from "react-router-dom";
 import {useRef, useState} from "react";
+import ReactDOM from "react-dom/client";
+import Alert from "../alert/alert";
 
 const backend_endpoint = "http://localhost:8080/api";
 
@@ -31,11 +33,13 @@ function Login() {
         let usernameValue = username.current.value;
         let passwordValue = password.current.value;
         if (usernameValue.trim().length === 0) {
-            alert("empty username");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Empty username"/>);
             return [false, null, null];
         }
         if (passwordValue.trim().length === 0) {
-            alert("empty password");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Empty password"/>);
             return [false, null, null];
         }
 
@@ -55,7 +59,8 @@ function Login() {
                 }
             }
 
-            alert("Wrong credentials");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Wrong credentials"/>);
         }
     }
 
@@ -80,7 +85,8 @@ function Login() {
                     });
 
                     if (postResponse.ok) {
-                        alert("New user created");
+                        const root = ReactDOM.createRoot(document.getElementById('root'));
+                        root.render(<Alert message="New user created"/>);
                         localStorage.setItem("nickname1", user.username);
                         activate();
                         return;
@@ -88,7 +94,8 @@ function Login() {
                 }
             }
 
-            alert("Could not create new user");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Could not create new user"/>);
         }
     }
 
@@ -105,7 +112,8 @@ function Login() {
                 }
             }
 
-            alert("Wrong credentials");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Wrong credentials"/>);
         }
     }
 
@@ -130,7 +138,8 @@ function Login() {
                     });
 
                     if (postResponse.ok) {
-                        alert("New user created");
+                        const root = ReactDOM.createRoot(document.getElementById('root'));
+                        root.render(<Alert message="New user created"/>);
                         localStorage.setItem("nickname1", user.username);
                         navigate('/game');
                         return;
@@ -138,7 +147,8 @@ function Login() {
                 }
             }
 
-            alert("Could not create new user");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Could not create new user"/>);
         }
     }
 

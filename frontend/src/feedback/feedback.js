@@ -1,5 +1,7 @@
 import '../main.css';
 import {useEffect, useRef, useState} from "react";
+import Alert from "../alert/alert";
+import ReactDOM from "react-dom/client";
 
 const backend_endpoint = "http://localhost:8080/api";
 
@@ -16,23 +18,27 @@ function Feedback() {
 
     const leaveFeedback = async () => {
         if (!checkString(rating.current.value)){
-            alert("Rating is not a number");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Rating is not a number"/>);
             return;
         }
 
         let rating_int = parseInt(rating.current.value);
         if (rating_int > 5 || rating_int < 1){
-            alert("Rating out of bounds");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Rating out of bounds"/>);
             return;
         }
 
         if (comment.current.value.trim().length === 0){
-            alert("Empty comment");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Empty comment"/>);
             return;
         }
 
         if (nickname.current.value.trim().length === 0){
-            alert("Empty nickname");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Empty nickname"/>);
             return;
         }
 
@@ -53,7 +59,8 @@ function Feedback() {
             });
 
         if(response.ok){
-            alert("Comment uploaded successfully");
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(<Alert message="Comment uploaded successfully"/>);
         }
     }
 
@@ -69,7 +76,7 @@ function Feedback() {
             if (response.ok){
                 const json = await response.json();
                 console.log(json);
-                setComments(json.slice(0, 2));
+                setComments(json.slice(0, 4));
             }
         }
 
@@ -78,6 +85,7 @@ function Feedback() {
 
     return (
         <div>
+            <div style={{zIndex: "100", position: "absolute", top: "2vh", left: "2vh", width: "20vh", height: "5vh", padding: "0"}}><button onClick={() => window.history.go(-1)}>BACK</button></div>
             <div className="header">
                 <div className="panel-mini">FEEDBACK</div>
             </div>
@@ -122,18 +130,20 @@ function Feedback() {
                                     style={{backgroundSize: "100% 100%", width: "100%", display: "block", margin: "0", position: "relative", padding: "0", textAlign: "center"}}>Clear</button>
                         </div>
                     </div>
-                    <div>
-                        {
-                            comments.map((comment) => {
-                                return (
-                                    <div>
-                                        <div>{comment.player}</div>
-                                        <br/>
-                                        <div>{comment.comment}</div>
-                                    </div>
-                                )
-                            })
-                        }
+                    <div style={{paddingLeft: "20px"}}>
+                        <div style={{margin: "3% auto", textAlign: "center"}}> RECENT COMMENTS </div>
+                        <div className="grid-container-2x2 grid-item-alt">
+                            {
+                                comments.map((comment) => {
+                                    return (
+                                        <div>
+                                            <div style={{color: "red"}}>{comment.player}</div>
+                                            <div style={{padding: "2% 6%"}}>{comment.comment}</div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
