@@ -1,6 +1,7 @@
 import '../main.css';
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import matchers from "@testing-library/jest-dom/matchers";
 
 const backend_endpoint = "http://localhost:8080/api";
 
@@ -14,6 +15,7 @@ function Game() {
     const [score2, setScore2] = useState(0);
     const [lamasPos, setLamasPos] = useState([]);
     const [lamasDir, setLamasDir] = useState([]);
+    const [lamaSide, setLamaSide] = useState([]);
     const [currentPlayer, setCurrentPlayer] = useState(1);
 
     const init = async () => {
@@ -107,8 +109,10 @@ function Game() {
         tiles.push("insert-right");
     }
 
-    const spamFruits = () => {
-
+    const spamFruits = (match) => {
+        for(let i = 0; i < match; i++){
+            
+        }
     }
 
     const insert = async (dir, index) => {
@@ -128,7 +132,7 @@ function Game() {
         if (response.ok) {
             const matches = await response.json()
             if(matches.length !== 0){
-                spamFruits();
+                spamFruits(matches);
             }
             tryGetField(tryInit(), 0, 0);
             nextState(state + 1);
@@ -157,14 +161,14 @@ function Game() {
     }
 
     const renderLamas = () => {
-        const lamas = 10;
+        const lamas = 20;
         let newArray = [];
         let newArrayDir = [];
         if (lamasPos.length === 0) {
             newArray = [];
             for (let i = 0; i < lamas; i++) {
                 newArray.push(Math.random() * 100);
-                newArrayDir.push(Math.random());
+                newArrayDir.push(Math.random() >= 0.5 ? 1 : -1);
             }
 
             setLamasPos(newArray);
@@ -178,7 +182,7 @@ function Game() {
         for (let i = 0; i < lamas; i++) {
             let dir = newArrayDir[i];
 
-            if (dir >= 0.5) {
+            if (dir > 0) {
                 lamaPoolIdle.push(<div style={{left: newArray[i] + "%", bottom: "5%"}}
                                        className="lama" id={"lama" + i}></div>);
             } else {
@@ -234,7 +238,29 @@ function Game() {
     })
 
     useEffect(() => {
-
+        var id = setInterval(() => {
+            const maxLamas = 20;
+            for(let i = 0; i < maxLamas; i++){
+                try{
+                    if(document.getElementById('lama'+i) !== null){
+                        let old = document.getElementById('lama'+i).style.getPropertyValue("left").replace('%', '');
+                        let new_ = (parseFloat(old) + 0.1) % 110;
+                        document.getElementById('lama'+i).style.setProperty("left", new_ + "%");
+                    }
+                    else{
+                        let old = document.getElementById('r-lama'+i).style.getPropertyValue("left").replace('%', '');
+                        let new_ = (parseFloat(old) - 0.1);
+                        if(new_ < -10){
+                            new_ = 110;
+                        }
+                        document.getElementById('r-lama'+i).style.setProperty("left", new_ + "%");
+                    }
+                }
+                catch {
+                    clearInterval(id);
+                }
+            }
+        }, 30)
     }, []);
 
     return (
