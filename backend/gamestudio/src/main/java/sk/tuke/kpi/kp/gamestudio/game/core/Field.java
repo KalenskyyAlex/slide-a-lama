@@ -169,4 +169,8 @@ public class Field {
             }
         }
     }
+
+    public void setFront(TileFront front) {
+        this.front = front;
+    }
 }

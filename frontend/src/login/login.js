@@ -164,18 +164,23 @@ function Login() {
         const id = setInterval(() => {
             const maxLamas = 15;
             for(let i = 0; i < maxLamas; i++){
-                if(document.getElementById('lama'+i) !== null){
-                    let old = document.getElementById('lama'+i).style.getPropertyValue("left").replace('%', '');
-                    let new_ = (parseFloat(old) + 0.1) % 110;
-                    document.getElementById('lama'+i).style.setProperty("left", new_ + "%");
-                }
-                else{
-                    let old = document.getElementById('r-lama'+i).style.getPropertyValue("left").replace('%', '');
-                    let new_ = (parseFloat(old) - 0.1);
-                    if(new_ < -10){
-                        new_ = 110;
+                try{
+                    if(document.getElementById('lama'+i) !== null){
+                        let old = document.getElementById('lama'+i).style.getPropertyValue("left").replace('%', '');
+                        let new_ = (parseFloat(old) + 0.1) % 110;
+                        document.getElementById('lama'+i).style.setProperty("left", new_ + "%");
                     }
-                    document.getElementById('r-lama'+i).style.setProperty("left", new_ + "%");
+                    else{
+                        let old = document.getElementById('r-lama'+i).style.getPropertyValue("left").replace('%', '');
+                        let new_ = (parseFloat(old) - 0.1);
+                        if(new_ < -10){
+                            new_ = 110;
+                        }
+                        document.getElementById('r-lama'+i).style.setProperty("left", new_ + "%");
+                    }
+                }
+                catch {
+                    clearInterval(id);
                 }
             }
         }, 30);

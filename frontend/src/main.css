@@ -129,6 +129,19 @@ body{
   grid-template-rows: 0.5fr 1fr 1fr;
 }
 
+.grid-container-1to1to1-h {
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 5%;
+  grid-template-rows: 1fr;
+}
+
 .grid-container-1to1-v {
   display: grid;
   position: relative;

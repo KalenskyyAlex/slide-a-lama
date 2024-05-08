@@ -36,4 +36,12 @@ public class TileFront {
     public List<Tile> toList(){
         return queue.stream().toList();
     }
+
+    public void initQueue(List<Tile> tiles) {
+        List<Tile> listCopy = new ArrayList<>();
+        for(Tile t: tiles){
+            listCopy.add(t);
+        }
+        queue = new LinkedList<>(listCopy);
+    }
 }
