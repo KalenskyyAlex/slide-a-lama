@@ -6,6 +6,7 @@ import Game from "../game/game";
 import Login from "../login/login";
 import Feedback from "../feedback/feedback";
 import Score from "../score/score";
+import Win from "../win/win";
 
 const router = createBrowserRouter(
     [
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
         {
             path: "/scores",
             element: <Score/>
+        },
+        {
+            path: "/win",
+            element: <Win/>
         }
     ]
 )
