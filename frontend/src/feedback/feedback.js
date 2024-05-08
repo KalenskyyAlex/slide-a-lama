@@ -15,6 +15,7 @@ function Feedback() {
     const comment = useRef(null);
     const nickname = useRef(null);
     const [comments, setComments] = useState([]);
+    const [intervalId, setIntervalId] = useState(null);
 
     const leaveFeedback = async () => {
         if (!checkString(rating.current.value)){
@@ -100,9 +101,87 @@ function Feedback() {
         getComments().catch(console.error);
     }, []);
 
+    useEffect(() => {
+        let id = setInterval(() => {
+            const maxLamas = 15;
+            for(let i = 0; i < maxLamas; i++){
+                if(document.getElementById('lama'+i) !== null){
+                    let old = document.getElementById('lama'+i).style.getPropertyValue("left").replace('%', '');
+                    let new_ = (parseFloat(old) + 0.1) % 110;
+                    document.getElementById('lama'+i).style.setProperty("left", new_ + "%");
+                }
+                else{
+                    let old = document.getElementById('r-lama'+i).style.getPropertyValue("left").replace('%', '');
+                    let new_ = (parseFloat(old) - 0.1);
+                    if(new_ < -10){
+                        new_ = 110;
+                    }
+                    document.getElementById('r-lama'+i).style.setProperty("left", new_ + "%");
+                }
+            }
+        }, 30);
+
+        setIntervalId(id);
+    }, []);
+
+    const renderLamas = () => {
+        const lamas = 15;
+        let lamaPoolIdle = [];
+        for(let i = 0; i < lamas; i++){
+            let dir = Math.random();
+            let bounce_height = Math.random();
+            let bounce_class = "bounce";
+            if(bounce_height >= 0.8){
+                bounce_class = "bounce-high";
+            }
+            else if(bounce_height <= 0.2){
+                bounce_class = "bounce-low";
+            }
+            if (dir >= 0.5){
+                lamaPoolIdle.push(<div style={{left:  Math.random()*100 + "%", bottom: "5%"}} className={bounce_class + " lama"} id={"lama"+i}></div>);
+            }
+            else{
+                lamaPoolIdle.push(<div style={{left:  Math.random()*100 + "%", bottom: "5%"}} className={bounce_class + " r-lama"} id={"r-lama"+i}></div>);
+            }
+        }
+
+        return lamaPoolIdle;
+    }
+
+    const lamaSad = () => {
+        for(let i = 0; i < 20; i++){
+            try{
+                if(document.getElementById('lama'+i) !== null){
+                    document.getElementById('lama'+i).setAttribute("class", "sad-lama fall-clock-wise")
+                }
+                else{
+                    document.getElementById('r-lama'+i).setAttribute("class", "r-sad-lama fall-counter-clock-wise")
+                }
+            }
+            catch {
+            }
+        }
+
+        clearInterval(intervalId);
+    }
+
     return (
         <div>
-            <div style={{zIndex: "100", position: "absolute", top: "2vh", left: "2vh", width: "20vh", height: "5vh", padding: "0"}}><button onClick={() => window.history.go(-1)}>BACK</button></div>
+            <div style={{
+                zIndex: "100",
+                position: "absolute",
+                top: "2vh",
+                left: "2vh",
+                width: "20vh",
+                height: "5vh",
+                padding: "0"
+            }}>
+                <button onClick={() => {
+                    lamaSad();
+                    setTimeout(() => window.history.go(-1), 1000)
+                }}>BACK
+                </button>
+            </div>
             <div className="header">
                 <div className="panel-mini">FEEDBACK</div>
             </div>
@@ -142,13 +221,31 @@ function Feedback() {
                             className="grid-item-alt"/>
                         <div className="grid-item-alt grid-container-1to1-v">
                             <button onClick={async () => await leaveFeedback()} className="grid-item-alt"
-                                    style={{backgroundSize: "100% 100%", width: "100%", display: "block", margin: "0", position: "relative", padding: "0", textAlign: "center"}}>Submit</button>
+                                    style={{
+                                        backgroundSize: "100% 100%",
+                                        width: "100%",
+                                        display: "block",
+                                        margin: "0",
+                                        position: "relative",
+                                        padding: "0",
+                                        textAlign: "center"
+                                    }}>Submit
+                            </button>
                             <button onClick={clearInput} className="grid-item-alt"
-                                    style={{backgroundSize: "100% 100%", width: "100%", display: "block", margin: "0", position: "relative", padding: "0", textAlign: "center"}}>Clear</button>
+                                    style={{
+                                        backgroundSize: "100% 100%",
+                                        width: "100%",
+                                        display: "block",
+                                        margin: "0",
+                                        position: "relative",
+                                        padding: "0",
+                                        textAlign: "center"
+                                    }}>Clear
+                            </button>
                         </div>
                     </div>
                     <div style={{paddingLeft: "20px"}}>
-                        <div style={{margin: "3% auto", textAlign: "center"}}> RECENT COMMENTS </div>
+                        <div style={{margin: "3% auto", textAlign: "center"}}> RECENT COMMENTS</div>
                         <div className="grid-container-2x2 grid-item-alt">
                             {
                                 comments.map((comment) => {
@@ -163,6 +260,11 @@ function Feedback() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="lamas-container">
+                {
+                    renderLamas()
+                }
             </div>
         </div>
     );

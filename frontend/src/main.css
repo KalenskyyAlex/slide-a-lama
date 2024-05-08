@@ -53,6 +53,31 @@ body{
   height: 5vh;
   left: 80%;
   width: 20%;
+  z-index: 100;
+}
+
+.lamas-container{
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+}
+
+.lama{
+  position: fixed;
+  background-image: url("../public/visual/lama.png");
+  background-size: contain;
+  width: 10vh;
+  height: 10vh;
+}
+
+.r-lama{
+  position: fixed;
+  background-image: url("../public/visual/r-lama.png");
+  background-size: contain;
+  width: 10vh;
+  height: 10vh;
 }
 
 .footer > button{
@@ -446,4 +471,94 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-high {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-low {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fall-clock-wise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(100px) rotate(180deg);
+  }
+}
+
+@keyframes fall-counter-clock-wise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(100px) rotate(-180deg);
+  }
+}
+
+.bounce {
+  animation: bounce 1.5s linear infinite;
+}
+
+.bounce-high {
+  animation: bounce-high 2s linear infinite;
+}
+
+.bounce-low {
+  animation: bounce-low 1s linear infinite;
+}
+
+.sad-lama{
+  position: fixed;
+  background-image: url("../public/visual/lama_sad.png");
+  background-size: contain;
+  width: 10vh;
+  height: 10vh;
+}
+
+.r-sad-lama{
+  position: fixed;
+  background-image: url("../public/visual/r-lama_sad.png");
+  background-size: contain;
+  width: 10vh;
+  height: 10vh;
+}
+
+.fall-clock-wise{
+  animation: fall-clock-wise 1s linear;
+}
+
+.fall-counter-clock-wise{
+  animation: fall-counter-clock-wise 1s linear;
 }

@@ -1,6 +1,6 @@
 import '../main.css';
 import {useNavigate} from "react-router-dom";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import ReactDOM from "react-dom/client";
 import Alert from "../alert/alert";
 
@@ -16,6 +16,7 @@ function Login() {
     const p2SignInRef = useRef(null);
     const p2LogInRef = useRef(null);
     const p2CompRef = useRef(null);
+    const [intervalId, setIntervalId] = useState(null);
 
     const [enableP2LogIn, setEnableP2LogIn] = useState(true);
     const [enableP2SignIn, setEnableP2SignIn] = useState(true);
@@ -154,8 +155,72 @@ function Login() {
 
     const start_comp = () => {
         // TODO create coop mode
+        lamaSad();
         localStorage.setItem("nickname2", "Computer");
-        navigate('/game');
+        setTimeout(() => {navigate('/game')}, 1000)
+    }
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            const maxLamas = 15;
+            for(let i = 0; i < maxLamas; i++){
+                if(document.getElementById('lama'+i) !== null){
+                    let old = document.getElementById('lama'+i).style.getPropertyValue("left").replace('%', '');
+                    let new_ = (parseFloat(old) + 0.1) % 110;
+                    document.getElementById('lama'+i).style.setProperty("left", new_ + "%");
+                }
+                else{
+                    let old = document.getElementById('r-lama'+i).style.getPropertyValue("left").replace('%', '');
+                    let new_ = (parseFloat(old) - 0.1);
+                    if(new_ < -10){
+                        new_ = 110;
+                    }
+                    document.getElementById('r-lama'+i).style.setProperty("left", new_ + "%");
+                }
+            }
+        }, 30);
+        setIntervalId(id)
+    }, []);
+
+    const renderLamas = () => {
+        const lamas = 15;
+        let lamaPoolIdle = [];
+        for(let i = 0; i < lamas; i++){
+            let dir = Math.random();
+            let bounce_height = Math.random();
+            let bounce_class = "bounce";
+            if(bounce_height >= 0.8){
+                bounce_class = "bounce-high";
+            }
+            else if(bounce_height <= 0.2){
+                bounce_class = "bounce-low";
+            }
+            if (dir >= 0.5){
+                lamaPoolIdle.push(<div style={{left:  Math.random()*100 + "%", bottom: "5%"}} className={bounce_class + " lama"} id={"lama"+i}></div>);
+            }
+            else{
+                lamaPoolIdle.push(<div style={{left:  Math.random()*100 + "%", bottom: "5%"}} className={bounce_class + " r-lama"} id={"r-lama"+i}></div>);
+            }
+        }
+
+        return lamaPoolIdle;
+    }
+
+    const lamaSad = () => {
+        for(let i = 0; i < 20; i++){
+            try{
+                if(document.getElementById('lama'+i) !== null){
+                    document.getElementById('lama'+i).setAttribute("class", "sad-lama fall-clock-wise")
+                }
+                else{
+                    document.getElementById('r-lama'+i).setAttribute("class", "r-sad-lama fall-counter-clock-wise")
+                }
+            }
+            catch {
+            }
+        }
+
+        clearInterval(intervalId);
     }
 
     return (
@@ -239,6 +304,11 @@ function Login() {
             <div className="footer">
                 <button onClick={() => navigate("/feedback")}>FEEDBACK</button>
                 <button onClick={() => navigate("/scores")}>SCORES</button>
+            </div>
+            <div className="lamas-container">
+                {
+                    renderLamas()
+                }
             </div>
         </div>
     );
