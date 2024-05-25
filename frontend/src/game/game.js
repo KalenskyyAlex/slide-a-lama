@@ -17,6 +17,35 @@ function Game() {
     const [lamasDir, setLamasDir] = useState([]);
     const [lamaSide, setLamaSide] = useState([]);
     const [currentPlayer, setCurrentPlayer] = useState(1);
+    const [timeLeft, setTimeLeft] = useState(null);
+
+    useEffect(() => {
+        if(timeLeft===0){
+            let directions = ["UP", "RIGHT", "LEFT"];
+            let direction = directions[Math.floor(Math.random()*directions.length)];
+
+            let positions = [1, 2, 3, 4, 5];
+            let position = positions[Math.floor(Math.random()*positions.length)];
+
+            insert(direction, position);
+            setTimeLeft(null)
+        }
+
+        // exit early when we reach 0
+        if (!timeLeft) return;
+
+        // save intervalId to clear the interval when the
+        // component re-renders
+        const intervalId = setInterval(() => {
+
+            setTimeLeft(timeLeft - 1);
+        }, 1000);
+
+        // clear interval on re-render to avoid memory leaks
+        return () => clearInterval(intervalId);
+        // add timeLeft as a dependency to re-rerun the effect
+        // when we update it
+    }, [timeLeft]);
 
     const init = async () => {
         const credentials = {
@@ -116,6 +145,7 @@ function Game() {
     }
 
     const insert = async (dir, index) => {
+        setTimeLeft(5);
         const cursor = {
             side: dir,
             position: index
@@ -269,7 +299,7 @@ function Game() {
                 <div>
                     <div className="panel-mini" style={{
                         width: "20%", position: "relative", textAlign: "center", fontSize: "1.5em"
-                    }}>{currentPlayer === 1 ? nickname1 : nickname2}'s turn</div>
+                    }}>{currentPlayer === 1 ? nickname1 : nickname2}'s turn {currentPlayer === 1 ? timeLeft : ""}</div>
                     <div style={{backgroundSize: "100% 100%",
                         top: "0%",
                         padding: "2%"}}

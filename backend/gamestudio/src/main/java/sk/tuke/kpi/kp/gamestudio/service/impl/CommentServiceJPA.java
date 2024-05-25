@@ -8,6 +8,7 @@ import sk.tuke.kpi.kp.gamestudio.service.CommentException;
 import sk.tuke.kpi.kp.gamestudio.service.CommentService;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ConcurrentModificationException;
 import java.util.List;
 
 @Transactional
@@ -25,7 +26,12 @@ public class CommentServiceJPA implements CommentService {
 
     @Override
     public List<Comment> getComments(String game) throws CommentException {
-        return entityManager.createNamedQuery("Comment.getComments").setParameter("game", game).getResultList();
+        try{
+            return entityManager.createNamedQuery("Comment.getComments").setParameter("game", game).getResultList();
+        }
+        catch (Exception e){
+            return null;
+        }
     }
 
     @Override

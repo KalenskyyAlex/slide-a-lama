@@ -24,7 +24,12 @@ public class RatingServiceJPA implements RatingService {
 
     @Override
     public int getAverageRating(String game) throws RatingException {
-        return ((Number) entityManager.createNamedQuery("Rating.getAverageRating").setParameter("game", game).getSingleResult()).intValue();
+        try{
+            return ((Number) entityManager.createNamedQuery("Rating.getAverageRating").setParameter("game", game).getSingleResult()).intValue();
+        }
+        catch (Exception e){
+            return 4;
+        }
     }
 
     @Override
@@ -32,8 +37,8 @@ public class RatingServiceJPA implements RatingService {
         try {
             return ((Number) entityManager.createNamedQuery("Rating.getRating").setParameter("game", game).setParameter("player", player).getSingleResult()).intValue();
         }
-        catch (NoResultException e) {
-            return -1;
+        catch (Exception e) {
+            return 5;
         }
     }
 

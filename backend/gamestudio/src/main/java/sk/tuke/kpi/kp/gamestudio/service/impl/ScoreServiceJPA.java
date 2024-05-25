@@ -8,6 +8,7 @@ import sk.tuke.kpi.kp.gamestudio.entity.Score;
 import sk.tuke.kpi.kp.gamestudio.service.ScoreException;
 import sk.tuke.kpi.kp.gamestudio.service.ScoreService;
 
+import java.util.ConcurrentModificationException;
 import java.util.List;
 
 @Transactional
@@ -25,8 +26,13 @@ public class ScoreServiceJPA implements ScoreService {
 
     @Override
     public List<Score> getTopScores(String game) throws ScoreException {
-        return entityManager.createNamedQuery("Score.getTopScores")
-                .setParameter("game", game).setMaxResults(10).getResultList();
+        try{
+            return entityManager.createNamedQuery("Score.getTopScores")
+                    .setParameter("game", game).setMaxResults(10).getResultList();
+        }
+        catch (ConcurrentModificationException e){
+            return null;
+        }
     }
 
     @Override
